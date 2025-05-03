@@ -5,6 +5,7 @@ import { Education } from "./_components/Education";
 import { Footer } from "./_components/Footer";
 import { Navbar } from "./_components/Navbar";
 import { Projects } from "./_components/Projects";
+import { Experience } from "./_components/Experience";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <Navbar />
       <main className="mx-auto max-w-xl flex flex-col justify-center gap-20 px-4 py-24">
         <AboutSimple />
-        <Projects />
         <Education />
+        <Experience/>
+        <Projects />
         <Footer />
       </main>
     </>

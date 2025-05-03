@@ -1,26 +1,33 @@
 export function Experience() {
+  const experienceItems = [
+    {
+      title: "Internship at Edgeverve",
+      duration: "6 months",
+      description: "AI Intern, I was responsible for developing and maintaining Agentic AI for banking solutions"
+    },
+    {
+      title: "Intern at Cantilever Labs",
+      duration: "4 months",
+      description: "I was responsible for generating, documenting and researching various topics on AI and Machine Learning"
+    },
+  ];
+
   return (
-    <div className="flex flex-col">
-      <h2>PROJECTS</h2>
-      <div>
-        <h3>TITLE</h3>
-        <p>DATE</p>
-        <p>TAGS: AI, WebDev, Misc</p>
-        <div>
-          CONTENT
-        </div>
-      </div>
-
-      <div>
-        <h3>TITLE</h3>
-        <p>DATE</p>
-        <p>TAGS: AI, WebDev, Misc</p>
-      </div>
-
-      <div>
-        <h3>TITLE</h3>
-        <p>DATE</p>
-        <p>TAGS: AI, WebDev, Misc</p>
+    <div className="flex flex-col gap-8 pt-12" id="education">
+      <h2 className="text-xl font-semibold tracking-tight">Experience</h2>
+      
+      <div className="flex flex-col gap-10">
+        {experienceItems.map((item, index) => (
+          <div key={index} className="group">
+            <div className="flex flex-col gap-1">
+              <h3 className="text-lg font-medium">{item.title}</h3>
+              <p className="text-sm opacity-75">{item.duration}</p>
+              {item.description && (
+                <p className="mt-1 text-sm opacity-90">{item.description}</p>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
