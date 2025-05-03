@@ -6,6 +6,8 @@ import { Footer } from "./_components/Footer";
 import { Navbar } from "./_components/Navbar";
 import { Projects } from "./_components/Projects";
 import { Experience } from "./_components/Experience";
+import { socialLinks } from "./_components/socials";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,7 +16,7 @@ export default function Home() {
       <main className="mx-auto max-w-xl flex flex-col justify-center gap-20 px-4 py-24">
         <AboutSimple />
         <Education />
-        <Experience/>
+        <Experience />
         <Projects />
         <Footer />
       </main>
@@ -23,24 +25,22 @@ export default function Home() {
 }
 
 function AboutSimple() {
-  const socialLinks = [
-    { name: "Twitter", href: "https://twitter.com/kausthubh" },
-    { name: "LinkedIn", href: "https://linkedin.com/in/kausthubh" },
-    { name: "GitHub", href: "https://github.com/kausthubh" }
-  ];
 
   return (
     <div className="flex gap-10 justify-center items-center pt-4" id="about">
-      <Image 
-        src="/pfp.jpeg" 
-        alt="Kausthubh profile picture" 
-        width={96} 
-        height={96} 
-        className="object-cover aspect-square rounded-full border-2 border-foreground border-opacity-10 shadow-md" 
+      <Image
+        src="/pfp.jpeg"
+        alt="Kausthubh profile picture"
+        width={96}
+        height={96}
+        className="object-cover aspect-square rounded-full border-2 border-foreground border-opacity-10 shadow-md"
       />
       <div className="flex flex-col gap-3">
-        <p className="font-medium">
-          Hello, my name is Kausthubh
+        <p className="">
+          Hello, my name is {' '}
+          <span className="font-bold italic text-accent">
+            Kausthubh
+          </span>
         </p>
         <p className="text-sm opacity-80">
           I'm a Software Engineer with a passion for building elegant solutions
@@ -49,12 +49,12 @@ function AboutSimple() {
         <ul className="flex gap-4">
           {socialLinks.map((link) => (
             <li key={link.name}>
-              <a 
+              <Link
                 href={link.href}
-                className="text-sm hover:underline transition-all opacity-75 hover:opacity-100"
+                className="text-sm transition-all opacity-75 hover:opacity-100"
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

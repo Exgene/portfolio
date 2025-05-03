@@ -35,17 +35,24 @@ export function Projects() {
             <div className="flex flex-col gap-1">
               <h3 className="text-lg font-medium">{project.title}</h3>
               <p className="text-sm opacity-75">{project.date}</p>
-              <p className="text-sm">
-                {project.tags.join(", ")}
+              <p className="text-xs flex gap-2">
+                {project.tags.map((tag, index) => {
+                  return (
+                    <span key={index} className="bg-black/50 border border-white/25 px-2 py-1 rounded-4xl">{tag}</span>
+                  )
+                })}
               </p>
               {project.content && (
                 <div className="mt-2 opacity-90 text-sm">
                   {project.content}
                 </div>
               )}
-              <div className="text-blue-500">
-                <Link href={project.link} className="text-sm">Link to github</Link>
-              </div>
+              <Link
+                href={project.link}
+                className="text-sm transition-all opacity-75 hover:opacity-100"
+              >
+                Link to github
+              </Link>
             </div>
           </div>
         ))}
