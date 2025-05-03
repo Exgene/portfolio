@@ -26,7 +26,7 @@ export function Education() {
           <div key={index} className="group">
             <div className="flex flex-col gap-1">
               <h3 className="text-lg font-medium">{item.title}</h3>
-              <p className="text-sm opacity-75">{item.date}</p>
+              <p className="text-xs text-muted-foreground">{item.date}</p>
               {item.description && (
                 <p className="mt-1 text-sm opacity-90">{item.description}</p>
               )}

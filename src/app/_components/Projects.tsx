@@ -34,7 +34,7 @@ export function Projects() {
           <div key={index} className="group">
             <div className="flex flex-col gap-1">
               <h3 className="text-lg font-medium">{project.title}</h3>
-              <p className="text-sm opacity-75">{project.date}</p>
+              <p className="text-xs text-muted-foreground">{project.date}</p>
               <p className="text-xs flex gap-2">
                 {project.tags.map((tag, index) => {
                   return (
@@ -43,7 +43,7 @@ export function Projects() {
                 })}
               </p>
               {project.content && (
-                <div className="mt-2 opacity-90 text-sm">
+                <div className="mt-2 text-foreground/95 text-sm">
                   {project.content}
                 </div>
               )}

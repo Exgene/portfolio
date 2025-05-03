@@ -51,8 +51,9 @@ function AboutSimple() {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="text-sm transition-all opacity-75 hover:opacity-100"
+                className="text-sm flex items-center gap-1 transition-all opacity-75 hover:opacity-100"
               >
+                <link.icon className="size-4"/>
                 {link.name}
               </Link>
             </li>

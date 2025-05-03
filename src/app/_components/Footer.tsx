@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { socialLinks } from "./socials"
 export function Footer() {
 
@@ -7,14 +8,13 @@ export function Footer() {
 
       <ul className="flex gap-4">
         {socialLinks.map((link) => (
-          <li key={link.name}>
-            <a
-              href={link.href}
-              className="text-sm hover:underline transition-all opacity-75 hover:opacity-100"
-            >
-              {link.name}
-            </a>
-          </li>
+          <Link
+            href={link.href}
+            className="text-sm transition-all opacity-75 hover:opacity-100"
+            key={link.name}
+          >
+            <link.icon className="size-4"/>
+          </Link>
         ))}
       </ul>
     </div>
