@@ -7,32 +7,51 @@ import { Projects } from "./_components/Projects";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-xl flex flex-col justify-center gap-20">
-      <Navbar></Navbar>
-      <AboutSimple></AboutSimple>
-      <Projects></Projects>
-      <Education></Education>
-      <Footer></Footer>
-    </main>
+    <>
+      <Navbar />
+      <main className="mx-auto max-w-xl flex flex-col justify-center gap-20 px-4 py-24">
+        <AboutSimple />
+        <Projects />
+        <Education />
+        <Footer />
+      </main>
+    </>
   );
 }
 
 function AboutSimple() {
+  const socialLinks = [
+    { name: "Twitter", href: "https://twitter.com/kausthubh" },
+    { name: "LinkedIn", href: "https://linkedin.com/in/kausthubh" },
+    { name: "GitHub", href: "https://github.com/kausthubh" }
+  ];
+
   return (
-    <div className="flex gap-10 justify-center ">
-      <img src="/pfp.jpeg" alt="" className="w-24 h-24 object-cover rounded-full border-2 border-white" />
-      <div className="flex flex-col gap-2">
-        <p>
-          Hello my name is Kausthubh
+    <div className="flex gap-10 justify-center items-center pt-4" id="about">
+      <img 
+        src="/pfp.jpeg" 
+        alt="Kausthubh profile picture" 
+        className="w-24 h-24 object-cover rounded-full border-2 border-foreground border-opacity-10 shadow-md" 
+      />
+      <div className="flex flex-col gap-3">
+        <p className="font-medium">
+          Hello, my name is Kausthubh
         </p>
-        <p>
-          Im a Software Engineer. I bath.... ocassionally
+        <p className="text-sm opacity-80">
+          I'm a Software Engineer with a passion for building elegant solutions
         </p>
 
-        <ul className="flex gap-2">
-          <li>Twitter</li>
-          <li>Linkedin</li>
-          <li>Github</li>
+        <ul className="flex gap-4">
+          {socialLinks.map((link) => (
+            <li key={link.name}>
+              <a 
+                href={link.href}
+                className="text-sm hover:underline transition-all opacity-75 hover:opacity-100"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
