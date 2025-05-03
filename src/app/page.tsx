@@ -46,17 +46,16 @@ function AboutSimple() {
           I'm a Software Engineer with a passion for building elegant solutions
         </p>
 
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 flex-wrap">
           {socialLinks.map((link) => (
-            <li key={link.name}>
-              <Link
-                href={link.href}
-                className="text-sm flex items-center gap-1 transition-all opacity-75 hover:opacity-100"
-              >
-                <link.icon className="size-4"/>
-                {link.name}
-              </Link>
-            </li>
+            <Link
+              href={link.href}
+              key={link.name}
+              className="text-sm flex items-center gap-1 transition-all opacity-75 hover:opacity-100"
+            >
+              <link.icon className="size-4" />
+              {link.name}
+            </Link>
           ))}
         </ul>
       </div>
