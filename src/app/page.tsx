@@ -1,5 +1,10 @@
+import Test from "@/markdown/test.mdx"
+
 export default function Home() {
   return (
-    <div>Hi</div>
+    <div>
+      Hi
+      <Test />
+    </div>
   );
 }
