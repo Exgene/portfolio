@@ -1,5 +1,6 @@
 // import Test from "@/markdown/test.mdx"
 
+import Image from "next/image";
 import { Education } from "./_components/Education";
 import { Footer } from "./_components/Footer";
 import { Navbar } from "./_components/Navbar";
@@ -28,10 +29,12 @@ function AboutSimple() {
 
   return (
     <div className="flex gap-10 justify-center items-center pt-4" id="about">
-      <img 
+      <Image 
         src="/pfp.jpeg" 
         alt="Kausthubh profile picture" 
-        className="w-24 h-24 object-cover rounded-full border-2 border-foreground border-opacity-10 shadow-md" 
+        width={96} 
+        height={96} 
+        className="object-cover aspect-square rounded-full border-2 border-foreground border-opacity-10 shadow-md" 
       />
       <div className="flex flex-col gap-3">
         <p className="font-medium">
