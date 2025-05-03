@@ -5,8 +5,48 @@ export default function Home() {
     <main className="mx-auto max-w-xl flex flex-col justify-center gap-20">
       <Navbar></Navbar>
       <AboutSimple></AboutSimple>
+      <Education></Education>
+      <Footer></Footer>
     </main>
   );
+}
+
+function Education() {
+  // Maybe i can move this over to about section. Ok for now
+  return (
+    <div className="flex flex-col">
+      <h2>EDUCATION</h2>
+      <div>
+        <h3>TITLE</h3>
+        <p>DATE</p>
+      </div>
+
+      <div>
+        <h3>TITLE</h3>
+        <p>DATE</p>
+      </div>
+
+      <div>
+        <h3>TITLE</h3>
+        <p>DATE</p>
+      </div>
+    </div>
+  )
+}
+
+function Footer() {
+  return (
+    <div className="w-full flex justify-between">
+      <p>@KAUSTHUBH J RAO</p>
+
+      <ul className="flex gap-2">
+        <li>Twitter</li>
+        <li>Linkedin</li>
+        <li>Github</li>
+      </ul>
+
+    </div>
+  )
 }
 
 function AboutSimple() {
@@ -21,7 +61,7 @@ function AboutSimple() {
           Im a Software Engineer. I bath.... ocassionally
         </p>
 
-        <ul className="flex">
+        <ul className="flex gap-2">
           <li>Twitter</li>
           <li>Linkedin</li>
           <li>Github</li>
