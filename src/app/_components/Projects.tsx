@@ -26,7 +26,7 @@ export function Projects() {
   ];
 
   return (
-    <div className="flex flex-col gap-8 pt-12" id="projects">
+    <section className="flex flex-col gap-8 pt-12" id="projects">
       <h2 className="text-xl font-semibold tracking-tight">Projects</h2>
 
       <div className="flex flex-col gap-10">
@@ -57,6 +57,6 @@ export function Projects() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

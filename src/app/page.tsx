@@ -18,16 +18,23 @@ export default function Home() {
         <Education />
         <Experience />
         <Projects />
+        <ContactMe />
         <Footer />
       </main>
     </>
   );
 }
 
+function ContactMe() {
+  return (
+    <section>CONTACT ME</section>
+  )
+}
+
 function AboutSimple() {
 
   return (
-    <div className="flex gap-10 justify-center items-center pt-4" id="about">
+    <section className="flex gap-10 justify-center items-center pt-4" id="about">
       <Image
         src="/pfp.jpeg"
         alt="Kausthubh profile picture"
@@ -59,7 +66,7 @@ function AboutSimple() {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   )
 }
 
