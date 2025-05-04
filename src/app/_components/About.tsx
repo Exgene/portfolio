@@ -1,4 +1,4 @@
-import { socialLinks } from "./socials"
+import { socials } from "./socials"
 import Link from "next/link"
 import Image from "next/image"
 export function AboutSimple() {
@@ -23,7 +23,7 @@ export function AboutSimple() {
         </p>
 
         <ul className="flex gap-4 flex-wrap">
-          {socialLinks.map((link) => (
+          {socials.map((link) => (
             <Link
               href={link.href}
               key={link.name}

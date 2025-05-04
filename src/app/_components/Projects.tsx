@@ -1,30 +1,8 @@
 import { ArrowRight, ArrowRightToLine, Github } from "lucide-react";
 import Link from "next/link";
+import { projects } from "./projects";
 
 export function Projects() {
-  const projects = [
-    {
-      title: "Portfolio Website",
-      date: "May 2025",
-      tags: ["Next.js", "React", "TailwindCSS"],
-      content: "A minimal portfolio website built with Next.js and TailwindCSS.",
-      link: "https://github.com/exgene"
-    },
-    {
-      title: "AI Image Generator",
-      date: "March 2025",
-      tags: ["AI", "React", "API"],
-      content: "An application that generates images using AI technology.",
-      link: "https://github.com/exgene"
-    },
-    {
-      title: "Task Management App",
-      date: "January 2025",
-      tags: ["React", "TypeScript", "Firebase"],
-      content: "A web application for managing tasks and projects.",
-      link: "https://github.com/exgene"
-    }
-  ];
 
   return (
     <section className="flex flex-col gap-8 pt-12" id="projects">
@@ -45,7 +23,7 @@ export function Projects() {
               </p>
               {project.content && (
                 <div className="mt-2 text-foreground/95 text-sm">
-                  {project.content}
+                  {project.content.brief}
                 </div>
               )}
 
