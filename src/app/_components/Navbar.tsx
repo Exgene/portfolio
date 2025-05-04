@@ -8,13 +8,13 @@ export function Navbar() {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 bg-background z-10">
+    <div className="fixed top-0 left-0 right-0 bg-background z-10 font-inter">
       <nav className="mx-auto max-w-xl h-16 flex items-center justify-between border-b border-white/50 px-4">
-        <p className="font-medium tracking-tight">Kausthubh J Rao</p>
+        <Link href={'/'} className="font-bold opacity-85 tracking-tight">Kausthubh J Rao</Link>
 
         <ul className="flex gap-6 flex-wrap">
           {navLinks.map((link) => (
-            <Link href={link.href} key={link.name} className="hover:underline transition-all text-sm">{link.name}</Link>
+            <Link href={link.href} key={link.name} className="transition-all text-sm opacity-85 hover:opacity-100">{link.name}</Link>
           ))}
         </ul>
       </nav>

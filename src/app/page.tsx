@@ -43,7 +43,7 @@ function AboutSimple() {
           </span>
         </p>
         <p className="text-sm opacity-80">
-          I'm a Software Engineer with a passion for building elegant solutions
+          I'm a <span className="font-bold">Software Engineer </span> who baths..... ocassionally. I love building stuff.
         </p>
 
         <ul className="flex gap-4 flex-wrap">
