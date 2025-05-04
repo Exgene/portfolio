@@ -14,7 +14,7 @@ export function Education() {
 
   return (
     <div className="flex flex-col gap-8 pt-12" id="education">
-      <h2 className="text-xl font-semibold tracking-tight">EDUCATION</h2>
+      <h2 className="text-xl font-semibold tracking-tight">Education</h2>
 
       <div className="flex flex-col gap-10">
         {educationItems.map((item, index) => (
