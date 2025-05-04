@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import { Education } from "./_components/Education";
-import { Footer } from "./_components/Footer";
-import { Navbar } from "./_components/Navbar";
 import { Projects } from "./_components/Projects";
 import { Experience } from "./_components/Experience";
 import { socialLinks } from "./_components/socials";
@@ -12,14 +10,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main className="mx-auto max-w-xl flex flex-col justify-center gap-12 px-4 py-24">
+      <main className="flex flex-col justify-center gap-12 px-4 py-24">
         <AboutSimple />
         <Education />
         <Experience />
         <Projects />
         <ContactMe />
-        <Footer />
       </main>
     </>
   );

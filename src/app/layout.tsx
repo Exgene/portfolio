@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "./_components/Navbar";
+import { Footer } from "./_components/Footer";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -25,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} ${inter.variable} antialiased`}
+        className={`${geistMono.variable} ${inter.variable} antialiased mx-auto max-w-xl`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

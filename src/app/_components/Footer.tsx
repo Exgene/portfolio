@@ -3,7 +3,7 @@ import { socialLinks } from "./socials"
 export function Footer() {
 
   return (
-    <footer className="w-full pt-8 flex justify-between items-center ">
+    <footer className="w-full py-8 pb-16 flex justify-between items-center">
       <p className="text-sm opacity-75">© {new Date().getFullYear()} Kausthubh J Rao</p>
 
       <ul className="flex gap-4">
