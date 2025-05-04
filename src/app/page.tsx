@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="mx-auto max-w-xl flex flex-col justify-center gap-20 px-4 py-24">
+      <main className="mx-auto max-w-xl flex flex-col justify-center gap-12 px-4 py-24">
         <AboutSimple />
         <Education />
         <Experience />
@@ -50,7 +50,7 @@ function AboutSimple() {
           </span>
         </p>
         <p className="text-sm opacity-80">
-          I'm a <span className="font-bold">Software Engineer </span> who baths..... ocassionally. I love building stuff.
+          I'm a <span className="font-bold">Software Engineer </span> who bathes..... ocassionally. I love building stuff.
         </p>
 
         <ul className="flex gap-4 flex-wrap">

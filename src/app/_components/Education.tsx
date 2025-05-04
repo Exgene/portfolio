@@ -7,7 +7,7 @@ export function Education() {
     },
     {
       title: "Canara PU College, CS",
-      date: "2019-2020",
+      date: "2019 - 2020",
       description: "Basics of Computers",
     },
   ];
