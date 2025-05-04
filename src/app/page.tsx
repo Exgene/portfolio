@@ -6,6 +6,7 @@ import { Projects } from "./_components/Projects";
 import { Experience } from "./_components/Experience";
 import { socialLinks } from "./_components/socials";
 import Link from "next/link";
+import { MailIcon, Twitter } from "lucide-react";
 
 export default function Home() {
   return (
@@ -23,12 +24,24 @@ export default function Home() {
 
 function ContactMe() {
   return (
-    <section>CONTACT ME</section>
+
+    <section className="flex flex-col gap-8 pt-12" id="education">
+      <h2 className="text-xl font-semibold tracking-tight">Contact Me</h2>
+      <div className="italic">
+        Forms TODO!
+        I will soon add a section for anonymous reach outs!
+      </div>
+      <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-1">
+          <Link href={'mailto:kausthubhjrao@gmail.com'} className="mt-1 text-xs opacity-85 hover:opacity-100 flex items-center gap-1"><MailIcon className="size-4" />Email</Link>
+          <Link href={'https://x.com/exgene'} className="mt-1 text-xs opacity-85 hover:opacity-100 flex items-center gap-1"><Twitter className="size-4" />Twitter Dm</Link>
+        </div>
+      </div>
+    </section>
   )
 }
 
 function AboutSimple() {
-
   return (
     <section className="flex gap-10 justify-center items-center pt-4" id="about">
       <Image
