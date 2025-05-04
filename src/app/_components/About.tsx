@@ -22,7 +22,7 @@ export function AboutSimple() {
           I'm a <span className="font-bold">Software Engineer </span> who bathes..... ocassionally. I love building stuff.
         </p>
 
-        <ul className="flex gap-4 flex-wrap">
+        <ul className="flex gap-4 flex-wrap xs:pr-4">
           {socials.map((link) => (
             <Link
               href={link.href}
