@@ -14,16 +14,16 @@ export function Experience() {
 
   return (
     <section className="flex flex-col gap-8 pt-12" id="education">
-      <h2 className="text-xl font-semibold tracking-tight">Experience</h2>
+      <h2 className="text-2xl font-semibold tracking-tight">Experience</h2>
       
       <div className="flex flex-col gap-10">
         {experienceItems.map((item, index) => (
           <div key={index} className="group">
             <div className="flex flex-col gap-1">
               <h3 className="text-lg font-medium">{item.title}</h3>
-              <p className="text-xs text-muted-foreground">{item.duration}</p>
+              <p className="text-sm text-muted-foreground">{item.duration}</p>
               {item.description && (
-                <p className="mt-1 text-sm opacity-90">{item.description}</p>
+                <p className="mt-1 text-base opacity-90">{item.description}</p>
               )}
             </div>
           </div>

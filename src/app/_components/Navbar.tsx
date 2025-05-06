@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Navbar() {
   const navLinks = [
-    { name: "About", href: "#about" },
+    // { name: "About", href: "#about" },
     { name: "Blog", href: "#blog" },
     // { name: "Youtube", href: "#youtube" }
   ];
@@ -14,7 +14,7 @@ export function Navbar() {
 
         <ul className="flex gap-6 flex-wrap">
           {navLinks.map((link) => (
-            <Link href={link.href} key={link.name} className="transition-all text-sm opacity-85 hover:opacity-100">{link.name}</Link>
+            <Link href={link.href} key={link.name} className="transition-all text-sm md:text-base opacity-85 hover:opacity-100">{link.name}</Link>
           ))}
         </ul>
       </nav>
