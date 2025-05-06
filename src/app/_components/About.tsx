@@ -27,7 +27,7 @@ export function AboutSimple() {
           <span>{'Mangalore'}</span> {/** 
            <MoveHorizontal />
            <span>{'Bangalore'}</span>
-          **/}         
+          **/}
         </p>
 
         <ul className="flex gap-4 flex-wrap xs:pr-4">
@@ -35,6 +35,7 @@ export function AboutSimple() {
             <Link
               href={link.href}
               key={link.name}
+              {...(link.name === "Resume" ? { download: true } : {})}
               className="text-base md:text-base flex items-center gap-1 transition-all opacity-85 hover:opacity-100" >
               <link.icon className="size-4" />
               {link.name}
@@ -42,7 +43,7 @@ export function AboutSimple() {
           ))}
         </ul>
       </div>
-    </section>
+    </section >
   )
 }
 

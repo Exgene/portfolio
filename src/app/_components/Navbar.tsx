@@ -14,7 +14,13 @@ export function Navbar() {
 
         <ul className="flex gap-6 flex-wrap">
           {navLinks.map((link) => (
-            <Link href={link.href} key={link.name} className="transition-all text-sm md:text-base opacity-85 hover:opacity-100">{link.name}</Link>
+            <Link href={link.href}
+              key={link.name}
+              className="transition-all text-sm md:text-base opacity-85 hover:opacity-100"
+              {...(link.name === "Resume" ? { download: true } : {})}
+            >
+              {link.name}
+            </Link>
           ))}
         </ul>
       </nav>
