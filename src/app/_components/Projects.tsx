@@ -6,7 +6,7 @@ export function Projects() {
 
   return (
     <section className="flex flex-col gap-8 pt-12" id="projects">
-      <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
 
       <div className="flex flex-col gap-10">
         {projects.map((project, index) => (
@@ -27,17 +27,17 @@ export function Projects() {
                 </div>
               )}
 
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-4 items-center ">
                 <Link
                   href={project.link}
-                  className="flex items-center gap-1 transition-all opacity-75 hover:opacity-100"
+                  className="flex items-center gap-1 sm:text-base text-sm transition-all opacity-75 hover:opacity-100"
                 >
                   <Github className="size-3" />Github
                 </Link>
 
-                <Link className="flex items-center gap-1 group" href={`/projects/${index}`}>
-                  Know more
-                  <ArrowRight className="size-3 pt-0 group-hover:translate-x-2 transition-all" />
+                <Link className="flex items-center gap-1 group " href={`/projects/${index}`}>
+                  <span className="sm:text-base text-sm">Know more</span>
+                  <ArrowRight className="size-3 group-hover:translate-x-2 transition-all" />
                 </Link>
               </div>
             </div>

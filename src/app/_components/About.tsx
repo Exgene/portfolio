@@ -12,7 +12,7 @@ export function AboutSimple() {
         height={144}
         className="object-cover rounded-full border-2 border-foreground/60 aspect-square shadow-md w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36"
       />
-      <div className="text-base md:text-lg flex flex-col gap-3">
+      <div className="text-sm md:text-lg flex flex-col gap-3">
         <p>
           Hello, my name is {' '}
           <span className="font-bold italic text-accent">
@@ -22,7 +22,7 @@ export function AboutSimple() {
         <p className="opacity-90">
           I'm a <span className="font-bold">Software Engineer </span> who bathes..... ocassionally. I love building stuff.
         </p>
-        <p className="text-sm flex items-center gap-2 text-muted-foreground opacity-80 py-2">
+        <p className="text-xs sm:text-sm flex items-center gap-2 text-muted-foreground opacity-80 py-2">
           <MapPin className="size-5" />
           <span>{'Mangalore'}</span> {/** 
            <MoveHorizontal />
@@ -36,7 +36,7 @@ export function AboutSimple() {
               href={link.href}
               key={link.name}
               {...(link.name === "Resume" ? { download: true } : {})}
-              className="text-base md:text-base flex items-center gap-1 transition-all opacity-85 hover:opacity-100" >
+              className="text-sm md:text-base flex items-center gap-1 transition-all opacity-85 hover:opacity-100" >
               <link.icon className="size-4" />
               {link.name}
             </Link>

@@ -14,7 +14,7 @@ export function Experience() {
 
   return (
     <section className="flex flex-col gap-8 pt-12" id="education">
-      <h2 className="text-2xl font-semibold tracking-tight">Experience</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Experience</h2>
       
       <div className="flex flex-col gap-10">
         {experienceItems.map((item, index) => (

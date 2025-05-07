@@ -4,7 +4,7 @@ export function Footer() {
 
   return (
     <footer className="w-full pb-16 px-4 flex justify-between items-center">
-      <p className="text-sm opacity-75">© {new Date().getFullYear()} Kausthubh J Rao</p>
+      <p className="text-sm opacity-75">© {new Date().getFullYear()} Kausthubh</p>
 
       <ul className="flex gap-4 flex-wrap">
         {socials.map((link) => (

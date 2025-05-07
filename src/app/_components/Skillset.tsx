@@ -81,7 +81,7 @@ export const Skillset = () => {
 
   return (
     <section className="flex flex-col gap-8 pt-12">
-      <h2 className="text-2xl font-semibold tracking-tight">Skills</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Skills</h2>
       <p className="italic text-muted-foreground hidden sm:grid"> PS I MADE THIS LAYOUT, I CALL IT THE WHACKJOB</p>
 
       <div className="grid sm:grid-cols-6 grid-cols-4 gap-4">
@@ -96,7 +96,7 @@ export const Skillset = () => {
             >
               <div className="flex items-center gap-3">
                 <skill.icon className="h-5 w-5 text-accent" />
-                <h3 className="mt-2 font-medium">{skill.name}</h3>
+                <h3 className="mt-2 text-sm sm:text-base font-medium">{skill.name}</h3>
               </div>
               <div className="mt-1">
                 <span className="text-xs text-muted-foreground">{skill.level}</span>

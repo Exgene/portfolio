@@ -14,7 +14,7 @@ export function Education() {
 
   return (
     <section className="flex flex-col gap-8 pt-12" id="education">
-      <h2 className="text-2xl font-semibold tracking-tight">Education</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Education</h2>
 
       <div className="flex flex-col gap-10">
         {educationItems.map((item, index) => (
@@ -25,7 +25,7 @@ export function Education() {
             )}
 
             <div className="relative flex flex-col gap-1">
-              <h3 className="text-lg font-medium">{item.title}</h3>
+              <h3 className="text-base sm:text-lg font-medium">{item.title}</h3>
               <div className="absolute -left-8 top-2 w-2 h-2 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors"></div>
               <p className="text-sm text-muted-foreground">{item.date}</p>
               {item.description && (
