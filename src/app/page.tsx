@@ -1,4 +1,7 @@
 // import Test from "@/markdown/test.mdx"
+//
+export const runtime = "edge"
+
 import { Skillset } from "./_components/Skillset";
 import { Education } from "./_components/Education";
 import { Projects } from "./_components/Projects";
