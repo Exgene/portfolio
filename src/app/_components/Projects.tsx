@@ -37,7 +37,7 @@ export function Projects() {
 
                 <Link className="flex items-center gap-1 group " href={`/projects/${index}`}>
                   <span className="sm:text-base text-sm">Know more</span>
-                  <ArrowRight className="size-3 group-hover:translate-x-2 transition-all" />
+                  <ArrowRight className="size-3 mt-[2px] group-hover:translate-x-2 transition-all" />
                 </Link>
               </div>
             </div>
