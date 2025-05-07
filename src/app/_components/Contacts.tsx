@@ -14,11 +14,19 @@ export function ContactMe() {
       </div>
       <div className="flex gap-10">
         <div className="flex gap-4 text-sm sm:text-base">
-          <Link href={'mailto:kausthubhjrao@gmail.com'} className="opacity-85 hover:opacity-100 flex items-center gap-1">
+          <Link 
+            href={'mailto:kausthubhjrao@gmail.com'} 
+            className="opacity-85 hover:opacity-100 flex items-center gap-1"
+          >
             <MailIcon className="size-4" />
             <span>Email</span>
           </Link>
-          <Link href={'https://x.com/exgene'} className="opacity-85 hover:opacity-100 flex items-center gap-1">
+          <Link 
+            href={'https://x.com/exgene'} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="opacity-85 hover:opacity-100 flex items-center gap-1"
+          >
             <Twitter className="size-4" />
             <span>Twitter Dm</span>
           </Link>

@@ -157,6 +157,8 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
         <div className="flex gap-4 items-center">
           <Link
             href={project.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1 text-sm transition-all opacity-75 hover:opacity-100"
           >
             <Github className="size-4" /> GitHub
@@ -164,6 +166,8 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
           {project.links.demo && (
             <Link
               href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-1 text-sm transition-all opacity-75 hover:opacity-100"
             >
               <ExternalLink className="size-4" /> Live Demo
@@ -172,6 +176,8 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
           {project.links.documentation && (
             <Link
               href={project.links.documentation}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-1 text-sm transition-all opacity-75 hover:opacity-100"
             >
               <ExternalLink className="size-4" /> Documentation

@@ -34,12 +34,17 @@ export function Projects() {
               <div className="flex gap-4 items-center ">
                 <Link
                   href={project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-1 sm:text-base text-sm transition-all opacity-75 hover:opacity-100"
                 >
                   <Github className="size-3" />Github
                 </Link>
 
-                <Link className="flex items-center gap-1 group " href={`/projects/${project.id}`}>
+                <Link 
+                  className="flex items-center gap-1 group" 
+                  href={`/projects/${project.id}`}
+                >
                   <span className="sm:text-base text-sm">Know more</span>
                   <ArrowRight className="size-3 mt-[2px] group-hover:translate-x-2 transition-all" />
                 </Link>

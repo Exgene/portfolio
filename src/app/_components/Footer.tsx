@@ -11,6 +11,8 @@ export function Footer() {
           {socials.map((link) => (
             <Link
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm transition-all opacity-75 hover:opacity-100"
               key={link.name}
             >

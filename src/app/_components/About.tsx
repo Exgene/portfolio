@@ -35,6 +35,8 @@ export function AboutSimple() {
             <Link
               href={link.href}
               key={link.name}
+              target="_blank"
+              rel="noopener noreferrer"
               {...(link.name === "Resume" ? { download: true } : {})}
               className="text-sm md:text-base flex items-center gap-1 transition-all opacity-85 hover:opacity-100" >
               <link.icon className="size-4" />
