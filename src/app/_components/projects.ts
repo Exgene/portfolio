@@ -30,6 +30,47 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+
+  {
+    id: "llm-optimization",
+    title: "LLM Optimization Research (Rakuten)",
+    date: "2025",
+    tags: ["Python", "Pytorch", "LLM", "Research", "Optimization"],
+    content: {
+      brief: "Research project on LLM optimization techniques, conducted as part of final year project with Rakuten.",
+      main: "Conducted extensive research on various optimization techniques for Large Language Models (LLMs) in collaboration with Rakuten. The project involved analyzing and implementing different approaches to improve model performance, reduce computational requirements, and enhance inference speed.",
+      features: [
+        "Model quantization",
+        "Knowledge distillation",
+        "Pruning techniques",
+        "Performance analysis"
+      ],
+      challenges: [
+        "Balancing model size and performance",
+        "Implementing optimization techniques",
+        "Evaluating trade-offs"
+      ],
+      learnings: [
+        "Advanced LLM optimization",
+        "Research methodology",
+        "Performance analysis"
+      ]
+    },
+    links: {
+      github: ""
+    },
+    tech: {
+      ai: ["PyTorch", "LLM", "Custom Optimization"],
+      tools: ["Git", "Jupyter Notebooks"]
+    },
+    images: {
+      main: "/projects/llm-optimization/main.png",
+      screenshots: [
+        "/projects/llm-optimization/screenshot1.png",
+        "/projects/llm-optimization/screenshot2.png"
+      ]
+    }
+  },
   {
     id: "real-incognito",
     title: "Real Incognito - AI Data Anonymizer",
@@ -116,6 +157,7 @@ export const projects: Project[] = [
     },
     achievements: ["1st Place in Logistics Domain at Hackfest 2024"]
   },
+
   {
     id: "locked-in-reality",
     title: "Locked in Reality - Treasure Hunt Game",
@@ -132,12 +174,10 @@ export const projects: Project[] = [
       ],
       challenges: [
         "Recreating Windows UI elements",
-        "Managing complex game state",
         "Creating engaging puzzles"
       ],
       learnings: [
         "Advanced UI/UX design",
-        "Game state management",
         "Animation and transitions"
       ]
     },
@@ -244,7 +284,7 @@ export const projects: Project[] = [
   {
     id: "portfolio-minimal",
     title: "Portfolio Minimal",
-    date: "2024",
+    date: "2025",
     tags: ["Next.js", "React", "TailwindCSS", "TypeScript"],
     content: {
       brief: "A minimal and modern portfolio website showcasing projects and skills.",
@@ -257,18 +297,17 @@ export const projects: Project[] = [
       ],
       challenges: [
         "Optimizing performance",
-        "Creating smooth animations",
         "Maintaining minimal design"
       ],
       learnings: [
-        "Next.js 14 features",
+        "Next.js 15 features",
         "Performance optimization",
         "Modern web design"
       ]
     },
     links: {
       github: "https://github.com/exgene/portfolio-minimal",
-      demo: "https://kausthubh.dev"
+      demo: "https://kausthubh.com"
     },
     tech: {
       frontend: ["Next.js", "React", "TypeScript", "TailwindCSS"],
@@ -282,44 +321,4 @@ export const projects: Project[] = [
       ]
     }
   },
-  {
-    id: "llm-optimization",
-    title: "LLM Optimization Research (Rakuten)",
-    date: "2024",
-    tags: ["Python", "Pytorch", "LLM", "Research", "Optimization"],
-    content: {
-      brief: "Research project on LLM optimization techniques, conducted as part of final year project with Rakuten.",
-      main: "Conducted extensive research on various optimization techniques for Large Language Models (LLMs) in collaboration with Rakuten. The project involved analyzing and implementing different approaches to improve model performance, reduce computational requirements, and enhance inference speed.",
-      features: [
-        "Model quantization",
-        "Knowledge distillation",
-        "Pruning techniques",
-        "Performance analysis"
-      ],
-      challenges: [
-        "Balancing model size and performance",
-        "Implementing optimization techniques",
-        "Evaluating trade-offs"
-      ],
-      learnings: [
-        "Advanced LLM optimization",
-        "Research methodology",
-        "Performance analysis"
-      ]
-    },
-    links: {
-      github: ""
-    },
-    tech: {
-      ai: ["PyTorch", "LLM", "Custom Optimization"],
-      tools: ["Git", "Jupyter Notebooks"]
-    },
-    images: {
-      main: "/projects/llm-optimization/main.png",
-      screenshots: [
-        "/projects/llm-optimization/screenshot1.png",
-        "/projects/llm-optimization/screenshot2.png"
-      ]
-    }
-  }
 ];
