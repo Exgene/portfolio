@@ -31,22 +31,24 @@ export function Projects() {
                 </div>
               )}
 
-              <div className="flex gap-4 items-center ">
+              <div className="flex gap-4 items-center">
                 <Link
                   href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 sm:text-base text-sm transition-all opacity-75 hover:opacity-100"
+                  aria-label={`View ${project.title} on GitHub`}
                 >
-                  <Github className="size-3" />Github
+                  <Github className="size-3" aria-hidden="true" />Github
                 </Link>
 
                 <Link 
                   className="flex items-center gap-1 group" 
                   href={`/projects/${project.id}`}
+                  aria-label={`Learn more about ${project.title}`}
                 >
                   <span className="sm:text-base text-sm">Know more</span>
-                  <ArrowRight className="size-3 mt-[2px] group-hover:translate-x-2 transition-all" />
+                  <ArrowRight className="size-3 mt-[2px] group-hover:translate-x-2 transition-all" aria-hidden="true" />
                 </Link>
               </div>
             </div>
@@ -58,9 +60,11 @@ export function Projects() {
         <button
           onClick={() => setShowAll(!showAll)}
           className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mx-auto mt-4"
+          aria-expanded={showAll}
+          aria-controls="projects-list"
         >
           {showAll ? "Show Less" : "Show More"}
-          <ChevronDown className={`size-4 transition-transform ${showAll ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`size-4 transition-transform ${showAll ? 'rotate-180' : ''}`} aria-hidden="true" />
         </button>
       )}
     </section>

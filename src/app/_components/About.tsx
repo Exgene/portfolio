@@ -4,7 +4,7 @@ import Image from "next/image"
 import { MapPin, MoveHorizontal } from "lucide-react"
 export function AboutSimple() {
   return (
-    <section className="flex gap-10 justify-center items-center pt-4" id="#about">
+    <section className="flex gap-10 justify-center items-center pt-4" id="about">
       <Image
         src="/pfp.jpeg"
         alt="Kausthubh profile picture"
@@ -23,25 +23,28 @@ export function AboutSimple() {
           I'm a <span className="font-bold">Software Engineer </span> who bathes..... ocassionally. I love building stuff.
         </p>
         <p className="text-xs sm:text-sm flex items-center gap-2 text-muted-foreground opacity-80 py-2">
-          <MapPin className="size-5" />
+          <MapPin className="size-5" aria-hidden="true" />
           <span>{'Mangalore'}</span> {/** 
            <MoveHorizontal />
            <span>{'Bangalore'}</span>
           **/}
         </p>
 
-        <ul className="flex gap-4 flex-wrap xs:pr-4">
+        <ul className="flex gap-4 flex-wrap xs:pr-4" role="navigation" aria-label="Social links">
           {socials.map((link) => (
-            <Link
-              href={link.href}
-              key={link.name}
-              target="_blank"
-              rel="noopener noreferrer"
-              {...(link.name === "Resume" ? { download: true } : {})}
-              className="text-sm md:text-base flex items-center gap-1 transition-all opacity-85 hover:opacity-100" >
-              <link.icon className="size-4" />
-              {link.name}
-            </Link>
+            <li key={link.name}>
+              <Link
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                {...(link.name === "Resume" ? { download: true } : {})}
+                className="text-sm md:text-base flex items-center gap-1 transition-all opacity-85 hover:opacity-100"
+                aria-label={`Visit ${link.name}`}
+              >
+                <link.icon className="size-4" aria-hidden="true" />
+                {link.name}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>

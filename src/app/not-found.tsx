@@ -9,8 +9,9 @@ export default function NotFound() {
       <Link
         href="/"
         className="flex items-center gap-2 text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors"
+        aria-label="Return to home page"
       >
-        <ArrowLeft className="size-4" />
+        <ArrowLeft className="size-4" aria-hidden="true" />
         Return home
       </Link>
     </section>
