@@ -1,3 +1,9 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Blog",
+    description: "My blog posts about various experiences and learnings I've had so far.",
+}
 export const runtime = "edge"
 
 export default function Blog() {

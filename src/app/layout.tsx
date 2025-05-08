@@ -14,9 +14,33 @@ const inter = Inter({
   subsets: ["latin"]
 })
 
+const title = "Kausthubh - Software Developer"
+const description = `Hi my name is Kausthubh, And I'm a software developer. I like cool tech.
+  I mainly work with AI but id love to dive deeper into different fields.`
+
 export const metadata: Metadata = {
-  title: "Kausthubh's Portfolio Site",
-  description: "Hi my name is Kausthubh, And I'm a aspiring software developer. I like cool tech. Im a sad sad guy",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_URL!),
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
+  description,
+  openGraph: {
+    title,
+    description,
+    locale: "en_US",
+    type: "website",
+    url: process.env.NEXT_PUBLIC_URL,
+    siteName: "Kausthubh's Minimal Portfolio Site",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Og Image",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
