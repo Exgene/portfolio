@@ -65,7 +65,7 @@ export const Skillset = () => {
     {
       name: "DevOps",
       icon: Cog,
-      level: "Beginner",
+      level: "Intermediate",
     },
     {
       name: "Firebase",
