@@ -1,10 +1,36 @@
+"use client"
+
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import { useState, useEffect } from "react"
 
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+export default function Loading() {
+  const [showLoading, setShowLoading] = useState(false)
+  const [shouldRender, setShouldRender] = useState(false)
 
-export default async function Loading() {
-  await delay(500)
+  useEffect(() => {
+    const showTimer = setTimeout(() => {
+      setShowLoading(true)
+    }, 1000)
+
+    return () => clearTimeout(showTimer)
+  }, [])
+
+  useEffect(() => {
+    if (showLoading) {
+      setShouldRender(true)
+      const hideTimer = setTimeout(() => {
+        setShouldRender(false)
+      }, 1000)
+
+      return () => clearTimeout(hideTimer)
+    }
+  }, [showLoading])
+
+  if (!shouldRender) {
+    return null
+  }
+
   return (
     <section className="min-h-[calc(100vh-6rem)] gap-10 text-3xl sm:text-5xl text-center flex flex-col items-center justify-center">
       <div className="flex flex-col items-center gap-6">
