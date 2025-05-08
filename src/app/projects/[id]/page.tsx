@@ -5,6 +5,8 @@ import { ArrowRight, Github, ExternalLink, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
+// const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const project = projects.find(p => p.id === id)
@@ -32,10 +34,22 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params
   const project = projects.find(p => p.id === id)
+  
+  // await delay(200000)
 
   if (!project) {
     return (
-      <section className="min-h-screen text-5xl text-center flex items-center justify-center font-bold">Invalid Project ID</section>
+      <section className="min-h-[calc(100vh-6rem)] gap-10 text-3xl sm:text-5xl text-center flex flex-col items-center justify-center font-bold">
+        This project doesn't exist
+        <p className="text-muted-foreground text-base sm:text-lg">But thank you for thinking I could build this!</p>
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <ArrowLeft className="size-4" />
+          Return home
+        </Link>
+      </section>
     )
   }
 
