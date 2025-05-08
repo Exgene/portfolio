@@ -1,3 +1,5 @@
+export const runtime = "edge"
+
 import { projects } from "@/app/_components/projects"
 import { ArrowRight, Github, ExternalLink, ArrowLeft } from "lucide-react"
 import Link from "next/link"
