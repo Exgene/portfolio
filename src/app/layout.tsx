@@ -32,14 +32,6 @@ export const metadata: Metadata = {
     type: "website",
     url: process.env.NEXT_PUBLIC_URL,
     siteName: "Kausthubh's Minimal Portfolio Site",
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Og Image",
-      },
-    ],
   },
 };
 

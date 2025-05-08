@@ -5,6 +5,30 @@ import { ArrowRight, Github, ExternalLink, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const project = projects.find(p => p.id === id)
+
+  return {
+    title: project?.title,
+    description: project?.content.brief,
+    openGraph: {
+      title: "Project - " + project?.title,
+      description: project?.content.brief,
+      images: {
+        url: project?.images.main,
+        width: 1200,
+        height: 630,
+        alt: "Project Image - " + project?.title,
+      },
+      locale: "en_US",
+      type: "website",
+      url: `${process.env.NEXT_PUBLIC_URL}/projects/${id}`,
+      siteName: "Kausthubh's Portfolio",
+    },
+  }
+}
+
 const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params
   const project = projects.find(p => p.id === id)
