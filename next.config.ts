@@ -5,7 +5,15 @@ const nextConfig: NextConfig = {
   turbopack: {
     resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
   },
-  pageExtensions: ['jsx', 'js', 'md', 'mdx', 'ts', 'tsx']
+  pageExtensions: ['jsx', 'js', 'md', 'mdx', 'ts', 'tsx'],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'static.cloudflareinsights.com',
+      },
+    ],
+  },
 };
 
 const withMDX = createMDX({
