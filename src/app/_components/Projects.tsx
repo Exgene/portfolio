@@ -14,7 +14,7 @@ export function Projects() {
 
       <div className="flex flex-col gap-10">
         {displayedProjects.map((project) => (
-          <div key={project.id} id={`${project.id}`}>
+          <div key={project.id} id={`${project.id}`} className="scroll-mt-20">
             <div className="flex flex-col gap-1">
               <h3 className="text-lg font-medium">{project.title}</h3>
               <p className="text-sm text-muted-foreground pb-1">{project.date}</p>

@@ -4,6 +4,7 @@ import { projects } from "@/app/_components/projects"
 import { ArrowRight, Github, ExternalLink, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import BackButton from "@/app/_components/BackButton"
 
 // const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -56,13 +57,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <section className="text-sm py-24 max-w-4xl mx-auto px-4">
       <div className="flex flex-col gap-8">
-        <Link
-          href={`/#${project.id}`}
-          className="flex items-center gap-2 text-sm transition-all opacity-75 hover:opacity-100 w-fit"
-        >
-          <ArrowLeft className="size-4" /> Back
-        </Link>
-
+        <BackButton id={project.id} />
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-bold">{project.title}</h1>
           <p className="text-sm text-muted-foreground">{project.date}</p>
