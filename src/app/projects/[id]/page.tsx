@@ -1,11 +1,15 @@
-export const runtime = "edge"
-
 import { projects } from "@/app/_components/projects"
 import { ArrowRight, Github, ExternalLink, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import BackButton from "@/app/_components/BackButton"
 
+export async function generateStaticParams() {
+  const ids = projects.map(project => ({
+    id: project.id
+  }))
+  return ids
+}
 // const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
