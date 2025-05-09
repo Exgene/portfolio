@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scheme-only-dark">
       <body
         className={`${geistMono.variable} ${inter.variable} antialiased mx-auto max-w-xl`}
       >
