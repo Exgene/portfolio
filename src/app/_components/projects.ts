@@ -264,7 +264,7 @@ export const projects: Project[] = [
     },
     links: {
       github: "https://github.com/Exgene/student-hub",
-      demo: "https://student-hub.vercel.app"
+      demo: "https://student-hub-nitte.vercel.app/"
     },
     tech: {
       frontend: ["Next.js", "React", "TailwindCSS"],
