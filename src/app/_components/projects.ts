@@ -182,7 +182,7 @@ export const projects: Project[] = [
     },
     links: {
       github: "https://github.com/Exgene/locked-in-reality",
-      demo: "https://locked-in-reality.vercel.app"
+      demo: "https://lir.tascnmamit.in/serverRoom"
     },
     tech: {
       frontend: ["Svelte", "TypeScript", "TailwindCSS"],
