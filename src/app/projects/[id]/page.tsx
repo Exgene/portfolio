@@ -47,7 +47,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: project.title,
     description: project.content.brief,
-    keywords,
     openGraph: {
       title: project.title,
       description: project.content.brief,
@@ -64,6 +63,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       locale: "en_US",
       type: "website",
     },
+    keywords,
     twitter: {
       card: "summary_large_image",
       title: project.title,

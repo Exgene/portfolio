@@ -21,6 +21,19 @@ const description = `Hi my name is Kausthubh, And I'm a software developer. I li
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_URL!),
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
+  description,
+  openGraph: {
+    title,
+    description,
+    locale: "en_US",
+    type: "website",
+    url: process.env.NEXT_PUBLIC_URL,
+    siteName: "Kausthubh's Minimal Portfolio Site",
+  },
   keywords: [
     'Kausthubh',
     'kausthubh',
@@ -43,23 +56,10 @@ export const metadata: Metadata = {
     'AI Projects',
     'Web Projects'
   ].join(', '),
-  title: {
-    default: title,
-    template: `%s | ${title}`,
-  },
-  description,
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
     apple: '/apple-icon.png',
-  },
-  openGraph: {
-    title,
-    description,
-    locale: "en_US",
-    type: "website",
-    url: process.env.NEXT_PUBLIC_URL,
-    siteName: "Kausthubh's Minimal Portfolio Site",
   },
 };
 
