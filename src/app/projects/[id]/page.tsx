@@ -3,6 +3,7 @@ import { ArrowRight, Github, ExternalLink, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import BackButton from "@/app/_components/BackButton"
+import { ImageCarousel } from "@/app/_components/ImageCarousel"
 
 export async function generateStaticParams() {
   const ids = projects.map(project => ({
@@ -22,12 +23,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     openGraph: {
       title: "Project - " + project?.title,
       description: project?.content.brief,
-      images: {
-        url: project?.images.main,
-        width: 1200,
-        height: 630,
-        alt: "Project Image - " + project?.title,
-      },
       locale: "en_US",
       type: "website",
       url: `${process.env.NEXT_PUBLIC_URL}/projects/${id}`,
@@ -39,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params
   const project = projects.find(p => p.id === id)
-  
+
   // await delay(200000)
 
   if (!project) {
@@ -79,6 +74,8 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             src={project.images.main}
             alt={project.title}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
             className="object-cover"
           />
         </div>
@@ -178,18 +175,10 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
         {project.images.screenshots.length > 0 && (
           <div className="flex flex-col gap-4">
             <h2 className="text-lg font-semibold">Screenshots</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {project.images.screenshots.map((screenshot, index) => (
-                <div key={index} className="relative aspect-video rounded-lg overflow-hidden">
-                  <Image
-                    src={screenshot}
-                    alt={`${project.title} screenshot ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+            <ImageCarousel 
+              images={project.images.screenshots} 
+              title={project.title}
+            />
           </div>
         )}
 

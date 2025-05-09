@@ -66,8 +66,8 @@ export const projects: Project[] = [
     images: {
       main: "/projects/llm-optimization/main.png",
       screenshots: [
-        "/projects/llm-optimization/screenshot1.png",
-        "/projects/llm-optimization/screenshot2.png"
+        "/projects/llm-optimization/1.png",
+        "/projects/llm-optimization/2.png"
       ]
     }
   },
