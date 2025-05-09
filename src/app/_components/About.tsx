@@ -39,6 +39,7 @@ export function AboutSimple() {
                 rel="noopener noreferrer"
                 className="text-sm md:text-base flex items-center gap-1 transition-all opacity-85 hover:opacity-100"
                 aria-label={`Visit ${link.name}`}
+                prefetch={false}
               >
                 <link.icon className="size-4" aria-hidden="true" />
                 {link.name}
