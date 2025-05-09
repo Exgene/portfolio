@@ -25,7 +25,6 @@ export function Navbar() {
                 href={link.href}
                 className="transition-all text-sm md:text-base opacity-85 hover:opacity-100"
                 aria-label={`Navigate to ${link.name}`}
-                {...(link.name === "Resume" ? { download: true } : {})}
               >
                 {link.name}
               </Link>

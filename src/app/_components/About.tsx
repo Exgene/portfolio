@@ -37,7 +37,6 @@ export function AboutSimple() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                {...(link.name === "Resume" ? { download: true } : {})}
                 className="text-sm md:text-base flex items-center gap-1 transition-all opacity-85 hover:opacity-100"
                 aria-label={`Visit ${link.name}`}
               >
