@@ -6,6 +6,7 @@ import { Projects } from "./_components/Projects";
 import { Experience } from "./_components/Experience";
 import { ContactMe } from "./_components/Contacts";
 import { AboutSimple } from "./_components/About";
+import { Metadata } from "next";
 
 export default function Home() {
   return (

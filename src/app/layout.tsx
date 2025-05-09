@@ -48,6 +48,11 @@ export const metadata: Metadata = {
     template: `%s | ${title}`,
   },
   description,
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title,
     description,
@@ -57,6 +62,7 @@ export const metadata: Metadata = {
     siteName: "Kausthubh's Minimal Portfolio Site",
   },
 };
+
 
 export default function RootLayout({
   children,
