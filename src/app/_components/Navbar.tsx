@@ -9,7 +9,7 @@ export function Navbar() {
 
   return (
     <div className="fixed top-0 left-0 right-0 bg-background z-10 font-inter">
-      <nav className="mx-auto max-w-xl h-16 flex items-center justify-between border-b border-white/50 px-4">
+      <nav className="mx-auto max-w-2xl h-16 flex items-center justify-between border-b border-white/50 px-4">
         <Link 
           href={'/'} 
           className="font-bold opacity-85 tracking-tight"
