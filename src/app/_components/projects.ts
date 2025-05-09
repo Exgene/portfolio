@@ -107,8 +107,7 @@ export const projects: Project[] = [
     images: {
       main: "/projects/real-incognito/main.png",
       screenshots: [
-        "/projects/real-incognito/screenshot1.png",
-        "/projects/real-incognito/screenshot2.png"
+        "/projects/real-incognito/1.png",
       ]
     },
     achievements: ["2nd Place in AI Domain at Hackathon"]
@@ -151,8 +150,8 @@ export const projects: Project[] = [
     images: {
       main: "/projects/freix/main.png",
       screenshots: [
-        "/projects/freix/screenshot1.png",
-        "/projects/freix/screenshot2.png"
+        "/projects/freix/1.png",
+        "/projects/freix/2.png"
       ]
     },
     achievements: ["1st Place in Logistics Domain at Hackfest 2024"]
@@ -192,8 +191,8 @@ export const projects: Project[] = [
     images: {
       main: "/projects/locked-in-reality/main.png",
       screenshots: [
-        "/projects/locked-in-reality/screenshot1.png",
-        "/projects/locked-in-reality/screenshot2.png"
+        "/projects/locked-in-reality/1.png",
+        "/projects/locked-in-reality/2.png"
       ]
     }
   },
@@ -233,8 +232,8 @@ export const projects: Project[] = [
     images: {
       main: "/projects/incridea/main.png",
       screenshots: [
-        "/projects/incridea/screenshot1.png",
-        "/projects/incridea/screenshot2.png"
+        "/projects/incridea/1.png",
+        "/projects/incridea/2.png"
       ]
     }
   },
@@ -276,8 +275,8 @@ export const projects: Project[] = [
     images: {
       main: "/projects/student-hub/main.png",
       screenshots: [
-        "/projects/student-hub/screenshot1.png",
-        "/projects/student-hub/screenshot2.png"
+        "/projects/student-hub/1.png",
+        "/projects/student-hub/2.png"
       ]
     }
   },
@@ -316,8 +315,8 @@ export const projects: Project[] = [
     images: {
       main: "/projects/portfolio/main.png",
       screenshots: [
-        "/projects/portfolio/screenshot1.png",
-        "/projects/portfolio/screenshot2.png"
+        "/projects/portfolio/1.png",
+        "/projects/portfolio/2.png"
       ]
     }
   },
