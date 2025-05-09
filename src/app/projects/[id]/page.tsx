@@ -24,12 +24,30 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     }
   }
 
+  const keywords = [
+    project.title,
+    ...project.tags,
+    ...project.tech.frontend || [],
+    ...project.tech.backend || [],
+    ...project.tech.database || [],
+    ...project.tech.ai || [],
+    ...project.tech.tools || [],
+    'portfolio',
+    'project',
+    'software development',
+    'web development',
+    'full stack',
+    'developer',
+    'kausthubh',
+  ].join(', ')
+
   const url = `${process.env.NEXT_PUBLIC_URL}/projects/${id}`
   const imageUrl = `${process.env.NEXT_PUBLIC_URL}${project.images.main}`
 
   return {
     title: project.title,
     description: project.content.brief,
+    keywords,
     openGraph: {
       title: project.title,
       description: project.content.brief,

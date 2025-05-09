@@ -21,6 +21,24 @@ const description = `Hi my name is Kausthubh, And I'm a software developer. I li
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_URL!),
+  keywords: [
+    'Kausthubh',
+    'Software Developer',
+    'AI Developer',
+    'Machine Learning',
+    'Web Development',
+    'Full Stack',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Python',
+    'Portfolio',
+    'Developer Portfolio',
+    'Software Engineering',
+    'Tech Blog',
+    'AI Projects',
+    'Web Projects'
+  ].join(', '),
   title: {
     default: title,
     template: `%s | ${title}`,
