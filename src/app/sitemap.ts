@@ -10,14 +10,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         {
             url: process.env.NEXT_PUBLIC_URL!,
             lastModified: new Date().toISOString(),
+            changeFrequency: "weekly",
         },
-        {
-            url: `${process.env.NEXT_PUBLIC_URL}/projects`,
-            lastModified: new Date().toISOString(),
-        },
+        // {
+        //     url: `${process.env.NEXT_PUBLIC_URL}/projects`,
+        //     lastModified: new Date().toISOString(),
+        //     changeFrequency: "weekly",
+        // },
         {
             url: `${process.env.NEXT_PUBLIC_URL}/blog`,
             lastModified: new Date().toISOString(),
+            changeFrequency: "weekly",
+            priority: 1,
         },
         ...project_urls,
     ]
