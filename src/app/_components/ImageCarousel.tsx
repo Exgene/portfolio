@@ -28,8 +28,8 @@ export function ImageCarousel({ images, title }: { images: string[], title: stri
       </CarouselContent>
       <p className="sm:hidden block">You can swipe to move between images</p>
 
-      <CarouselPrevious className="sm:block hidden" />
-      <CarouselNext className="sm:block hidden" />
+      <CarouselPrevious className="sm:flex hidden" />
+      <CarouselNext className="sm:flex hidden" />
     </Carousel>
   )
 }
