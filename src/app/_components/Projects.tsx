@@ -5,7 +5,8 @@ import { projects } from "./projects";
 import { useState } from "react";
 
 export function Projects() {
-  const [showAll, setShowAll] = useState(false);
+  const isCollapsed = localStorage.getItem('projects-collapsed') === 'true';
+  const [showAll, setShowAll] = useState(isCollapsed);
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
@@ -42,8 +43,8 @@ export function Projects() {
                   <Github className="size-3" aria-hidden="true" />Github
                 </Link>
 
-                <Link 
-                  className="flex items-center gap-1 group" 
+                <Link
+                  className="flex items-center gap-1 group"
                   href={`/projects/${project.id}`}
                   aria-label={`Learn more about ${project.title}`}
                 >
@@ -58,7 +59,10 @@ export function Projects() {
 
       {projects.length > 3 && (
         <button
-          onClick={() => setShowAll(!showAll)}
+          onClick={() => {
+            setShowAll(!showAll);
+            localStorage.setItem('projects-collapsed', (!showAll).toString())
+          }}
           className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mx-auto mt-4"
           aria-expanded={showAll}
           aria-controls="projects-list"
