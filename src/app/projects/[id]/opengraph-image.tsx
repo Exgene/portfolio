@@ -7,6 +7,14 @@ export const size = {
   height: 630,
 }
 export const contentType = 'image/png'
+const BASE_URL = process.env.NEXT_PUBLIC_URL || "http://localhost:3000"
+
+export async function generateStaticParams() {
+  const ids = projects.map(project => ({
+    id: project.id
+  }))
+  return ids
+}
 
 export default async function Image({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -15,6 +23,10 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   if (!project) {
     return
   }
+
+  const imageUrl = project.images.main.startsWith("http")
+    ? project.images.main
+    : `${BASE_URL}/${project.images.main}`
 
 
   return new ImageResponse(
@@ -26,7 +38,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundImage: `url(${project.images.main})`,
+          backgroundImage: `url(${imageUrl})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
