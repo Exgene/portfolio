@@ -78,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scheme-only-dark">
       <body
-        className={`${geistMono.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased mx-auto max-w-2xl`}
+        className={`${geistMono.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased mx-auto max-w-3xl`}
       >
         <Navbar />
         {children}
