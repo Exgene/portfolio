@@ -44,7 +44,7 @@ const CodeBlock = async ({ children, className }: { children: string; className?
   });
 
   return (
-    <pre className="bg-muted text-muted-foreground py-4 px-4 rounded-lg overflow-x-auto text-sm font-geist-mono">
+    <pre className="bg-muted text-muted-foreground rounded-lg overflow-x-auto text-sm font-jetbrains-mono ">
       <code
         className={`language-${language}`}
         dangerouslySetInnerHTML={{ __html: sanitizedCode }}
@@ -56,28 +56,28 @@ const CodeBlock = async ({ children, className }: { children: string; className?
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }: ComponentWithChildren) => (
-      <h1 className="text-2xl font-bold text-foreground/95 font-geist-mono">
+      <h1 className="text-3xl font-bold text-foreground/95 font-geist-mono mt-12 mb-6">
         {children}
       </h1>
     ),
     h2: ({ children }: ComponentWithChildren) => (
-      <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground/95 font-geist-mono">
+      <h2 className="text-2xl font-semibold tracking-tight text-foreground/95 font-geist-mono mt-10 mb-4">
         {children}
       </h2>
     ),
     h3: ({ children }: ComponentWithChildren) => (
-      <h3 className="text-lg font-medium text-foreground/95 font-geist-mono">
+      <h3 className="text-xl font-medium text-foreground/95 font-geist-mono mt-8 mb-3">
         {children}
       </h3>
     ),
     h4: ({ children }: ComponentWithChildren) => (
-      <h4 className="text-base font-medium text-foreground/95 font-geist-mono">
+      <h4 className="text-lg font-medium text-foreground/95 font-geist-mono mt-6 mb-2">
         {children}
       </h4>
     ),
 
     p: ({ children }: ComponentWithChildren) => (
-      <p className="text-foreground/95 text-base font-inter">
+      <p className="text-foreground/95 text-base font-inter leading-7 my-4">
         {children}
       </p>
     ),
@@ -92,17 +92,17 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
 
     ul: ({ children }: ComponentWithChildren) => (
-      <ul className="list-disc list-inside space-y-1 text-foreground/90 font-inter">
+      <ul className="list-disc list-inside space-y-2 text-foreground/90 font-inter my-6">
         {children}
       </ul>
     ),
     ol: ({ children }: ComponentWithChildren) => (
-      <ol className="list-decimal list-inside space-y-1 text-foreground/90 font-inter">
+      <ol className="list-decimal list-inside space-y-2 text-foreground/90 font-inter my-6">
         {children}
       </ol>
     ),
     li: ({ children }: ComponentWithChildren) => (
-      <li className="text-foreground/90 font-inter">
+      <li className="text-foreground/90 font-inter leading-7">
         {children}
       </li>
     ),
@@ -112,32 +112,32 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         return <CodeBlock className={className}>{children}</CodeBlock>;
       }
       return (
-        <code className="bg-muted text-muted-foreground rounded text-sm font-geist-mono break-words">
+        <code className="bg-muted text-muted-foreground rounded text-sm font-jetbrains-mono break-words px-1.5 py-0.5">
           {children}
         </code>
       );
     },
 
     pre: ({ children }: ComponentWithChildren) => (
-      <pre className="bg-muted text-muted-foreground py-2 px-2 rounded-lg mb-4 overflow-x-auto text-sm font-geist-mono">
+      <pre className="bg-muted text-muted-foreground py-6 px-6 rounded-lg mb-8 overflow-x-auto text-sm font-jetbrains-mono">
         {children}
       </pre>
     ),
 
     blockquote: ({ children }: ComponentWithChildren) => (
-      <blockquote className="text-muted-foreground border-l-4 border-accent pl-4 ml-0 mr-0 mb-6 italic font-inter">
+      <blockquote className="text-muted-foreground border-l-4 border-accent pl-6 ml-0 mr-0 my-8 italic font-inter">
         {children}
       </blockquote>
     ),
 
     hr: () => (
-      <hr className="border-none border-t border-foreground/10 my-8" />
+      <hr className="border-none border-t border-foreground/10 my-12" />
     ),
 
     img: (props) => (
       <Image
         sizes="100vw"
-        className="w-full h-auto rounded-lg my-6"
+        className="w-full h-auto rounded-lg my-8"
         {...(props as ImageProps)}
       />
     ),
@@ -154,7 +154,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
 
     table: ({ children }: ComponentWithChildren) => (
-      <div className="overflow-x-auto mb-6">
+      <div className="overflow-x-auto my-8">
         <table className="w-full border-collapse text-sm text-foreground/90 font-inter">
           {children}
         </table>
