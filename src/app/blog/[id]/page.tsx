@@ -50,6 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       ],
       locale: "en_US",
       type: "article",
+      authors: ["Kausthubh"],
     },
     keywords,
     twitter: {

@@ -4,6 +4,28 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Blog - Kausthubh",
   description: "Read my thoughts on technology, programming, and more.",
+  openGraph: {
+    title: "Blog - Kausthubh",
+    description: "Read my thoughts on technology, programming, and more.",
+    locale: "en_US",
+    type: "article",
+    url: process.env.NEXT_PUBLIC_URL,
+    siteName: "Kausthubh's Minimal Portfolio Site",
+    authors: ["Kausthubh"],
+  },
+  keywords: [
+    'Kausthubh Blogs',
+    'Kausthubh Blog',
+    'Kausthubh J Rao Blogs',
+    'Kausthubh J Rao Blog',
+    'Blogs',
+    'Blog',
+    'Technology',
+    'Programming',
+    'Software Development',
+    'Web Development',
+    'AI Development',
+  ].join(', '),
 }
 
 export default function Blog() {

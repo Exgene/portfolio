@@ -35,9 +35,10 @@ export const metadata: Metadata = {
     title,
     description,
     locale: "en_US",
-    type: "website",
+    type: "article",
     url: process.env.NEXT_PUBLIC_URL,
     siteName: "Kausthubh's Minimal Portfolio Site",
+    authors: ["Kausthubh"],
   },
   keywords: [
     'Kausthubh',
