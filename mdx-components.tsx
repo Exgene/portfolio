@@ -3,18 +3,18 @@ import Image, { ImageProps } from "next/image";
 import React from "react";
 
 const colors = {
-  background: "#1a1a1a", // Very dark gray
-  text: "#e0e0e0", // Light gray
-  heading: "#ffffff", // White
-  link: "#64b5f6", // Light blue
-  linkHover: "#90caf9", // Brighter blue for hover (Note: Inline styles can't do hover)
+  background: "#1a1a1a", 
+  text: "#e0e0e0", 
+  heading: "#ffffff", 
+  link: "#64b5f6", 
+  linkHover: "#90caf9", 
   inlineCodeBg: "#333333",
   inlineCodeText: "#f5f5f5",
-  preBg: "#263238", // Dark blue-gray for code blocks
+  preBg: "#263238",
   preText: "#eeffff",
-  blockquoteBorder: "#4db6ac", // Teal
-  blockquoteText: "#bdbdbd", // Medium gray
-  hr: "#444444", // Dark gray border
+  blockquoteBorder: "#4db6ac", 
+  blockquoteText: "#bdbdbd", 
+  hr: "#444444",
 };
 
 const typography = {
