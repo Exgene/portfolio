@@ -1,6 +1,5 @@
 import type { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
-import React from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-python";
 import "prismjs/components/prism-typescript";
@@ -8,6 +7,7 @@ import "prismjs/components/prism-jsx";
 import "prismjs/components/prism-tsx";
 import "prismjs/themes/prism-tomorrow.css";
 import DOMPurify from "isomorphic-dompurify";
+import { CopyButton } from "@/components/CopyButton";
 
 type ComponentWithChildren = { children?: React.ReactNode };
 
@@ -44,12 +44,15 @@ const CodeBlock = async ({ children, className }: { children: string; className?
   });
 
   return (
-    <pre className="bg-muted text-muted-foreground rounded-lg overflow-x-auto text-sm font-jetbrains-mono ">
-      <code
-        className={`language-${language}`}
-        dangerouslySetInnerHTML={{ __html: sanitizedCode }}
-      />
-    </pre>
+    <div className="relative group">
+      <pre className="bg-muted text-muted-foreground py-0 px-6 rounded-lg overflow-x-auto text-sm font-jetbrains-mono my-8">
+        <CopyButton text={children} />
+        <code
+          className={`language-${language}`}
+          dangerouslySetInnerHTML={{ __html: sanitizedCode }}
+        />
+      </pre>
+    </div>
   );
 };
 
@@ -97,12 +100,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </ul>
     ),
     ol: ({ children }: ComponentWithChildren) => (
-      <ol className="list-decimal list-inside space-y-2 text-foreground/90 font-inter my-6">
+      <ol className="list-decimal list-outside space-y-2 text-foreground/90 font-inter my-6 pl-6">
         {children}
       </ol>
     ),
     li: ({ children }: ComponentWithChildren) => (
-      <li className="text-foreground/90 font-inter leading-7">
+      <li className="text-foreground/90 font-inter leading-7 marker:text-muted-foreground">
         {children}
       </li>
     ),
@@ -119,7 +122,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     },
 
     pre: ({ children }: ComponentWithChildren) => (
-      <pre className="bg-muted text-muted-foreground py-6 px-6 rounded-lg mb-8 overflow-x-auto text-sm font-jetbrains-mono">
+      <pre className="bg-muted text-muted-foreground rounded-lg mb-8 overflow-x-auto text-sm font-jetbrains-mono">
         {children}
       </pre>
     ),
