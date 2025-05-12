@@ -2,10 +2,13 @@
 import { ArrowRight, ArrowRightToLine, Github, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { projects } from "./projects";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Projects() {
-  const isCollapsed = localStorage.getItem('projects-collapsed') === 'true';
+  const isCollapsed =
+    typeof window === "undefined"
+      ? false
+      : localStorage.getItem("projects-collapsed") === "true";
   const [showAll, setShowAll] = useState(isCollapsed);
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
@@ -14,6 +17,7 @@ export function Projects() {
       <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
 
       <div className="flex flex-col gap-10">
+        
         {displayedProjects.map((project) => (
           <div key={project.id} id={`${project.id}`} className="scroll-mt-20">
             <div className="flex flex-col gap-1">
