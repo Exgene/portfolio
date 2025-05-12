@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter } from "next/font/google";
+import { Geist_Mono, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./_components/Navbar";
 import { Footer } from "./_components/Footer";
@@ -12,6 +12,11 @@ const geistMono = Geist_Mono({
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"]
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"]
 })
 
@@ -72,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scheme-only-dark">
       <body
-        className={`${geistMono.variable} ${inter.variable} antialiased mx-auto max-w-2xl`}
+        className={`${geistMono.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased mx-auto max-w-2xl`}
       >
         <Navbar />
         {children}
