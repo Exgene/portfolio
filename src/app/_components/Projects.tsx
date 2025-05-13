@@ -5,21 +5,19 @@ import { projects } from "./projects";
 import { useEffect, useState } from "react";
 
 export function Projects() {
-  const [showAll, setShowAll] = useState(false);
-
-  useEffect(() => {
-    const isCollapsed = localStorage.getItem("projects-collapsed") === "true";
-    setShowAll(isCollapsed);
-  }, []);
+  const isCollapsed =
+    typeof window === "undefined"
+      ? false
+      : localStorage.getItem("projects-collapsed") === "true";
+  const [showAll, setShowAll] = useState(isCollapsed);
 
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <section className="flex flex-col gap-8 pt-12" id="projects">
+    <section className="flex flex-col gap-8 pt-12" id="projects" suppressHydrationWarning>
       <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
 
       <div className="flex flex-col gap-10">
-        
         {displayedProjects.map((project) => (
           <div key={project.id} id={`${project.id}`} className="scroll-mt-20">
             <div className="flex flex-col gap-1">

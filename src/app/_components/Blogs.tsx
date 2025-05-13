@@ -6,19 +6,17 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 
 export function Blogs() {
-    const [showAll, setShowAll] = useState(false);
-
-    useEffect(() => {
-        const isCollapsed = localStorage.getItem("blogs-collapsed") === "true";
-        setShowAll(isCollapsed);
-    }, []);
-
+    const isCollapsed =
+        typeof window === "undefined"
+            ? false
+            : localStorage.getItem("blogs-collapsed") === "true"
+    const [showAll, setShowAll] = useState(isCollapsed)
     const displayedBlogs = showAll ? blogs : blogs.slice(0, 3)
 
     return (
-        <section className="flex flex-col gap-8 pt-12" id="blogs">
+        <section className="flex flex-col gap-8 pt-12" id="blogs" suppressHydrationWarning>
             <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Blogs</h2>
-
+            u
             <div className="flex flex-col gap-10">
                 {displayedBlogs.map((blog) => (
                     <div key={blog.id} id={`${blog.id}`} className="scroll-mt-20">
