@@ -1,24 +1,23 @@
 "use client"
 import { ArrowRight, ArrowRightToLine, Github, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { projects } from "./projects";
+import { projects as p } from "./projects";
 import { useEffect, useState } from "react";
 
 export function Projects() {
-  const isCollapsed =
-    typeof window === "undefined"
-      ? false
-      : localStorage.getItem("projects-collapsed") === "true";
-  const [showAll, setShowAll] = useState(isCollapsed);
+  const [projects, setProjects] = useState(p);
 
-  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+  useEffect(() => {
+    const isCollapsed = localStorage.getItem("projects-collapsed") === "true";
+    setProjects(p.slice(0, isCollapsed ? 3 : p.length));
+  }, []);
 
   return (
-    <section className="flex flex-col gap-8 pt-12" id="projects" suppressHydrationWarning>
+    <section className="flex flex-col gap-8 pt-12" id="projects">
       <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
 
       <div className="flex flex-col gap-10">
-        {displayedProjects.map((project) => (
+        {projects.map((project) => (
           <div key={project.id} id={`${project.id}`} className="scroll-mt-20">
             <div className="flex flex-col gap-1">
               <h3 className="text-lg font-medium">{project.title}</h3>
@@ -61,20 +60,18 @@ export function Projects() {
         ))}
       </div>
 
-      {projects.length > 3 && (
         <button
           onClick={() => {
-            setShowAll(!showAll);
-            localStorage.setItem('projects-collapsed', (!showAll).toString())
+            setProjects(p.slice(0, projects.length > 3 ? 3 : p.length));
+            localStorage.setItem('projects-collapsed', projects.length > 3 ? "true" : "false")
           }}
           className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mx-auto mt-4"
-          aria-expanded={showAll}
+          aria-expanded={projects.length > 3}
           aria-controls="projects-list"
         >
-          {showAll ? "Show Less" : "Show More"}
-          <ChevronDown className={`size-4 transition-transform ${showAll ? 'rotate-180' : ''}`} aria-hidden="true" />
+          {projects.length > 3 ? "Show Less" : "Show More"}
+          <ChevronDown className={`size-4 transition-transform ${projects.length > 3 ? 'rotate-180' : ''}`} aria-hidden="true" />
         </button>
-      )}
     </section>
   );
 }
