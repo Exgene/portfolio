@@ -6,11 +6,13 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 
 export function Blogs() {
-    const isCollapsed =
-        typeof window === "undefined"
-            ? false
-            : localStorage.getItem("blogs-collapsed") === "true"
-    const [showAll, setShowAll] = useState(isCollapsed)
+    const [showAll, setShowAll] = useState(false);
+
+    useEffect(() => {
+        const isCollapsed = localStorage.getItem("blogs-collapsed") === "true";
+        setShowAll(isCollapsed);
+    }, []);
+
     const displayedBlogs = showAll ? blogs : blogs.slice(0, 3)
 
     return (

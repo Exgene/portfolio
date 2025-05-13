@@ -5,11 +5,13 @@ import { projects } from "./projects";
 import { useEffect, useState } from "react";
 
 export function Projects() {
-  const isCollapsed =
-    typeof window === "undefined"
-      ? false
-      : localStorage.getItem("projects-collapsed") === "true";
-  const [showAll, setShowAll] = useState(isCollapsed);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    const isCollapsed = localStorage.getItem("projects-collapsed") === "true";
+    setShowAll(isCollapsed);
+  }, []);
+
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
