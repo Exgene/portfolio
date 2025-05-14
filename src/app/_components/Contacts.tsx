@@ -25,7 +25,7 @@ export function ContactMe() {
           </li>
           <li>
             <Link 
-              href={'https://x.com/exgene'} 
+              href={'https://x.com/kaxsthxbh'} 
               target="_blank"
               rel="noopener noreferrer"
               className="opacity-85 hover:opacity-100 flex items-center gap-1"
