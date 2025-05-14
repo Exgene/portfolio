@@ -16,14 +16,12 @@
   --font-jetbrains-mono: var(--font-jetbrains-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #141312;
-    --foreground: #ededed;
-    --accent: #d79921;
-    --muted: #171717;
-    --muted-foreground: #a3a3a3;
-  }
+:root {
+  --background: #141312;
+  --foreground: #ededed;
+  --accent: #d79921;
+  --muted: #171717;
+  --muted-foreground: #a3a3a3;
 }
 
 body {
@@ -35,7 +33,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }

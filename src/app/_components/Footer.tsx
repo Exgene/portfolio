@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-4xl mx-auto flex justify-between items-center">
         <p className="text-sm opacity-75">© {new Date().getFullYear()} Kausthubh</p>
 
-        <ul className="flex gap-4 flex-wrap" role="navigation" aria-label="Social links">
+        <ul className="flex gap-4 flex-wrap" role="navigation">
           {socials.map((link) => (
             <li key={link.name}>
               <Link

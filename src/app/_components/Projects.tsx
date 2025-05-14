@@ -16,7 +16,7 @@ export function Projects() {
     <section className="flex flex-col gap-8 pt-12" id="projects">
       <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10" id="projects-list">
         {projects.map((project) => (
           <div key={project.id} id={`${project.id}`} className="scroll-mt-20">
             <div className="flex flex-col gap-1">
@@ -66,7 +66,7 @@ export function Projects() {
             localStorage.setItem('projects-collapsed', projects.length > 3 ? "true" : "false")
           }}
           className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mx-auto mt-4"
-          aria-expanded={projects.length > 3}
+          aria-expanded={projects.length > 3 ? "true" : "false"}
           aria-controls="projects-list"
         >
           {projects.length > 3 ? "Show Less" : "Show More"}
