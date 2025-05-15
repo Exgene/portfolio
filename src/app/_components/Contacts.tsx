@@ -12,7 +12,7 @@ export function ContactMe() {
         <span className="">These are my preferred way of contacts, Although you can message me up in any of the socials i have mentioned! :)</span>
       </div>
       <div className="flex gap-10">
-        <ul className="flex gap-4 text-sm sm:text-base" role="navigation">
+        <ul className="flex gap-4 text-sm sm:text-base">
           <li>
             <Link 
               href={'mailto:kausthubhjrao@gmail.com'} 

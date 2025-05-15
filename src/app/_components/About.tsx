@@ -30,7 +30,7 @@ export function AboutSimple() {
           **/}
         </p>
 
-        <ul className="flex gap-4 flex-wrap xs:pr-4" role="navigation">
+        <ul className="flex gap-4 flex-wrap xs:pr-4">
           {socials.map((link) => (
             <li key={link.name}>
               <Link

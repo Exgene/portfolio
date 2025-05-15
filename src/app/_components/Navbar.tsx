@@ -18,7 +18,7 @@ export function Navbar() {
           Kausthubh J Rao
         </Link>
 
-        <ul className="flex gap-6 flex-wrap" role="navigation">
+        <ul className="flex gap-6 flex-wrap">
           {navLinks.map((link) => (
             <li key={link.name}>
               <Link 
