@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "./_components/Navbar";
 import { Footer } from "./_components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import Head from "next/head";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -64,7 +65,6 @@ export const metadata: Metadata = {
   ].join(', '),
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
@@ -83,6 +83,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scheme-only-dark">
+      <Head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <body
         className={`${geistMono.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased mx-auto max-w-3xl`}
       >
