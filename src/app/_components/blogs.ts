@@ -22,7 +22,7 @@ export const blogs: Blog[] = [
       brief: "A story about how i got into linux / neovim from my bloated windows / vsc*de setup and became a wizard at it.",
       mdxPath: "vim-motions"
     },
-    image: "/projects/llm-optimization/main.png",
+    image: "/blogs/vim-motions.jpg",
     author: "Kausthubh",
     readTime: "10 min read"
   },

@@ -104,7 +104,7 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
-            className="object-cover"
+            className="object-fit"
           />
         </div>
 
