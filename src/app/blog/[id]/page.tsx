@@ -73,7 +73,7 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const MDXContent = (await import(`@/markdown/${blog.content.mdxPath}.mdx`)).default
 
   return (
-    <section className="text-sm py-24 max-w-4xl mx-auto px-4">
+    <section className="text-sm py-12 mx-auto px-4">
       <div className="flex flex-col gap-8">
         <BackButton id={blog.id} route="blog" />
         <div className="flex flex-col gap-2">

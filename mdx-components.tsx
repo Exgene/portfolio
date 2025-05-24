@@ -58,17 +58,17 @@ const CodeBlock = async ({ children, className }: { children: string; className?
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }: ComponentWithChildren) => (
-      <h1 className="text-3xl font-extrabold tracking-tight text-accent font-sans mt-20 mb-10 leading-tight">
+      <h1 className="sm:text-3xl text-xl font-extrabold tracking-tight text-accent font-sans mt-20 mb-10 leading-tight">
         {children}
       </h1>
     ),
     h2: ({ children }: ComponentWithChildren) => (
-      <h2 className="text-2xl font-bold tracking-tight text-accent font-sans mt-16 mb-8 leading-snug">
+      <h2 className="sm:text-2xl text-xl font-bold tracking-tight text-accent font-sans mt-16 mb-8 leading-snug">
         {children}
       </h2>
     ),
     h3: ({ children }: ComponentWithChildren) => (
-      <h3 className="text-xl font-semibold text-accent font-sans mt-12 mb-6 leading-snug">
+      <h3 className="sm:text-xl text-lg font-semibold text-accent font-sans mt-12 mb-6 leading-snug">
         {children}
       </h3>
     ),
@@ -78,7 +78,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h4>
     ),
     p: ({ children }: ComponentWithChildren) => (
-      <p className="text-lg font-normal text-foreground/90 font-sans leading-8 my-6">
+      <p className="sm:text-lg text-base font-normal text-foreground/90 font-sans leading-8 my-6">
         {children}
       </p>
     ),
@@ -93,17 +93,17 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </a>
     ),
     ul: ({ children }: ComponentWithChildren) => (
-      <ul className="list-disc list-outside space-y-6 text-foreground/90 font-sans my-10 pl-8 text-lg">
+      <ul className="list-disc list-outside sm:space-y-6 text-foreground/90 font-sans my-10 pl-4 sm:pl-10 text-lg">
         {children}
       </ul>
     ),
     ol: ({ children }: ComponentWithChildren) => (
-      <ol className="list-decimal list-outside space-y-6 text-foreground/90 font-sans my-10 pl-8 text-lg">
+      <ol className="list-decimal list-outside sm:space-y-6 text-foreground/90 font-sans my-10 sm:pl-8 text-lg">
         {children}
       </ol>
     ),
     li: ({ children }: ComponentWithChildren) => (
-      <li className="text-foreground/90 font-sans leading-8 pl-3">
+      <li className="text-foreground/90 font-sans leading-8 sm:pl-3">
         {children}
       </li>
     ),
