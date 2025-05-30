@@ -14,6 +14,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.target = ['browserslist:modern'];
+    }
+    return config;
+  },
+  experimental: {
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  }
 };
 
 const withMDX = createMDX({

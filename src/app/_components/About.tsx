@@ -2,6 +2,7 @@ import { socials } from "./socials"
 import Link from "next/link"
 import Image from "next/image"
 import { MapPin, MoveHorizontal } from "lucide-react"
+
 export function AboutSimple() {
   return (
     <section className="flex gap-10 justify-center items-center pt-4" id="about">
@@ -10,7 +11,10 @@ export function AboutSimple() {
         alt="Kausthubh profile picture"
         width={144}
         height={144}
+        sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 144px"
         className="object-cover rounded-full border-2 border-foreground/60 aspect-square shadow-md w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36"
+        priority
+        quality={85}
       />
       <div className="text-sm md:text-lg flex flex-col gap-3">
         <p>

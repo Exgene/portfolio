@@ -1,0 +1,16 @@
+{
+  "minify": true,
+  "jsc": {
+    "minify": {
+      "compress": {
+        "unused": true
+      },
+      "mangle": true
+    }
+  },
+  "env": {
+    "skip": [
+      "core-js"
+    ]
+  }
+}
