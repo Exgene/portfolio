@@ -2,6 +2,7 @@ import { blogs } from "@/app/_components/blogs"
 import Image from "next/image"
 import BackButton from "@/app/_components/BackButton"
 import { notFound } from "next/navigation"
+import { ViewCounter } from "@/app/_components/ViewCounter"
 
 export async function generateStaticParams() {
   const ids = blogs.map(blog => ({
@@ -84,6 +85,8 @@ const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             <span>{blog.readTime}</span>
             <span>•</span>
             <span>{blog.author}</span>
+            <span>•</span>
+            <ViewCounter slug={blog.id} />
           </div>
           <div className="flex gap-2 flex-wrap">
             {blog.tags.map((tag, index) => (
