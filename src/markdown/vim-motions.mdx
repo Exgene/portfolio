@@ -1,52 +1,112 @@
-I was a naive Windows + VSC\*de user once. This is about how a simple change of habit helped me become a total linux wizard. Yes you heard it right vim motions forced me into linux (*And i have never been happier*)
+# I was a naive Windows + VSC\*de user once
+
+This is about how a simple change of habit helped me become a total Linux wizard.  
+Yes, you heard it right—**vim motions forced me into Linux** (*and I have never been happier*).
+
+---
 
 ## How the f\*ck did this start?
 
-I watch youtube, Lots of youtube. Especially when getting into tech i watched a lot of **THEPRIMEAGEN**. It fascinated me that he could fly through a new code base like a wizard. And here i was using my windows pc which took 5 years to boot up and used the bloated vsc\*de with a MOUSE for everything. I wanted to change but just the thought of investing more time into switching away from an editor, Especially in college where you are spending almost all your time learning the basics (Ofcouse the syllabus is trash but i geniuenly think you should learn your basics really well) it was a huge descision to take.
+I watch YouTube. Lots of YouTube.  
+Especially when I was getting into tech, I watched a ton of **THEPRIMEAGEN**. It fascinated me that he could fly through a new codebase like a wizard. Meanwhile, I was stuck on my Windows PC that took five years to boot, using the bloated VSC\*de, clicking around with a mouse like a peasant.
+
+I *wanted* to change, but just the thought of investing more time into switching editors felt insane—especially in college, where you're already spending all your time learning the basics (yeah, the syllabus is trash, but I genuinely think you should learn your basics really well). It was a huge decision to make.
 
 But the more I watched, the more I realized:
-If you don’t at least try vim motions, you’re falling behind.
 
-## If you don't atleast try vim motions you are geniuenly falling behind
+> If you don’t at least try vim motions, you’re falling behind.
 
-Hot take? Maybe. But in a world where everyone’s tabbing through autocomplete and letting LLMs write their code, there’s something different about vim motions.
-Yeah, the learning curve is real. You’ll look dumb. You’ll be slow. You’ll wonder why you’re torturing yourself when you could just click around like everyone else.
+---
+
+## If you don't at least try vim motions, you're genuinely falling behind
+
+Hot take? Maybe.  
+But in a world where everyone’s tabbing through autocomplete and letting LLMs write their code, there’s something **different** about vim motions.
+
+Yeah, the learning curve is real.  
+You’ll look dumb.  
+You’ll be slow.  
+You’ll wonder why you’re torturing yourself when you could just click around like everyone else.
 
 But here’s the thing:
 
-Once you get it—*even a little bit*—writing code becomes *fun*. Editing text feels like playing an instrument. You’re not fighting your editor; you’re dancing with it. And after a while, you’ll realize you don’t want to go back.
-I started with vim bindings in my editor. I was so slow that booting up windows felt faster. But now? I can edit code faster than your grandma can knit a scarf.
+Once you get it—*even a little bit*—writing code becomes **fun**.  
+Editing text feels like playing an instrument.  
+You’re not fighting your editor; you’re dancing with it.  
+And after a while, you’ll realize you don’t want to go back.
 
-## Linux said i can fix you.
+I started with vim bindings in my editor. I was *so slow* that booting up Windows felt faster.  
+But now? I can edit code faster than your grandma can knit a scarf.
 
-Eventually, I got fed up with Windows. The bloat, the slowness,the lack of ability to brick your system anytime ,the **ADS UGH**
+---
 
-So, I googled the most popular non bloated distro for linux, It was Arch linux. I didn't use the archinstall script, I installed it from scratch.
+## Neovim on Windows broke me
 
-Yeah, I was that guy.
-Started with KDE (because it looked shiny), then switched to GNOME (which, let’s be honest, is just Apple on Linux).
-I really wanted to try out a WM so i installed hyprland. Then I Bricked my system. Twice.
+I was loving vim motions, but Neovim on Windows was so broken at the time.
+Basic stuff like `grep`, external tools, proper terminal behavior was broken atleast for me. The most annoying was that most of the lsp's installed through Mason was broken for me. So i had to manually download all of them. **I HATED THAT SO MUCH**.
+
+So this gave me the final nudge to push over into the beautiful land of broken systems, Linux.
+
+---
+
+## Linux said: *"I can fix you."*
+
+I googled the most popular non-bloated Linux distro.  
+It was Arch Linux.
+
+I didn’t use the `archinstall` script. I installed it **from scratch**.  
+Yeah, I was *that* guy.
+
+Started with KDE (because it looked shiny), then switched to GNOME (which, let’s be honest, is just Apple on Linux).  
+I really wanted to try out a WM so I installed Hyprland.  
+Then I bricked my system. Twice.
+
 Finally, I landed on Fedora and never looked back.
 
-But the amounts of things i learn while fiddling with arch helped me understand how many of these things work under the hood, Especially to get the GPU working.
+But the amount of things I learned while fiddling with Arch helped me understand how everything works under the hood—especially getting the GPU working.
 
-- **Boot Process**: 
-You actually see what a bootloader is, And you learn how to chroot into a broken system and fix it.
+---
 
-- **Partitioning and Filesystems**: You stop being scared of lsblk, fdisk, and mkfs. You know the difference between ext4, btrfs, and xfs not because you read it, but because you had to pick one.
+### 🧠 What Arch Taught Me:
 
-- **Networking**: You realize Wi-Fi doesn’t “just work.” You learn about iwctl, wpa_supplicant, and why NetworkManager is a blessing.
+- **Boot Process**:  
+  You actually see what a bootloader is. You learn how to `chroot` into a broken system and fix it.
 
-- **Graphics Drivers**: Getting your GPU working especially NVIDIA, was such a pain
+- **Partitioning and Filesystems**:  
+  You stop being scared of `lsblk`, `fdisk`, and `mkfs`.  
+  You know the difference between ext4, Btrfs, and XFS—not because you read it, but because you had to *pick one*.
 
-- **Display Servers**: You figure out what X11 and Wayland actually are, and why your fancy compositor sometimes just gives you a black screen.
+- **Networking**:  
+  You realize Wi-Fi doesn’t “just work.”  
+  You learn about `iwctl`, `wpa_supplicant`, and why NetworkManager is a blessing.
 
-- **Troubleshooting**: You stop panicking when you see a kernel panic or a black screen. You learn to Google like a pro, read logs, and actually understand what’s going on.
+- **Graphics Drivers**:  
+  Getting your GPU working—especially NVIDIA—was such a pain.
 
-## The Finale: 
+- **Display Servers**:  
+  You figure out what X11 and Wayland actually are, and why your fancy compositor sometimes just gives you a black screen.
 
-Learning vim motions made me appreciate the part of writing code even more. Because getting your thought out into code is honestly kinda the bottle neck most of the time, And vim makes that part more engaging, Atleast for me, Which inturn makes me way more productive. Guess what it was the same for when i was writing this blog as well.
+- **Troubleshooting**:  
+  You stop panicking when you see a kernel panic or a black screen.  
+  You learn to Google like a pro, read logs, and actually understand what’s going on.
 
-Thats it from me. Im kinda active on twitter, Mostly rage baiting for views (Just for fun), So if you wanna connect about anything the link is literally there in the footer.
+---
 
+## The Finale
 
+Learning vim motions made me appreciate the process of writing code even more.  
+Because honestly, getting your thought out into code is the real bottleneck most of the time.  
+And vim makes that part more *engaging*—at least for me—which in turn makes me way more productive.
+
+Guess what?  
+It was the same when I was writing this blog as well.
+
+But more than that, it was vim motions that pushed me out of the Windows comfort zone.  
+They opened the door to Neovim, which opened the door to Linux, which opened the door to **everything else**.
+
+What started as a simple desire to get things done in a more fun way turned me into a keyboard andy.
+All because of vim*(motions)*.
+
+That’s it from me.  
+I’m kinda active on Twitter—mostly rage-baiting for views (just for fun).  
+So if you wanna connect about anything, the link is literally there in the footer.
