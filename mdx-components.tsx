@@ -112,18 +112,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         return <CodeBlock className={className}>{children}</CodeBlock>;
       }
       return (
-        <code className="bg-zinc-100 text-zinc-800 rounded px-2 py-1 text-sm font-mono">
+        <code className="bg-muted text-muted-foreground rounded px-2 py-1 text-sm font-jetbrains-mono">
           {children}
         </code>
       );
     },
     pre: ({ children }: ComponentWithChildren) => (
-      <pre className="bg-zinc-900 text-zinc-100 rounded-lg mb-8 overflow-x-auto text-sm font-mono p-4">
+      <pre className="bg-muted text-muted-foreground rounded-lg mb-8 overflow-x-auto text-sm font-jetbrains-mono p-4">
         {children}
       </pre>
     ),
     blockquote: ({ children }: ComponentWithChildren) => (
-      <blockquote className="border-l-4 border-blue-400 pl-6 ml-0 mr-0 my-8 italic text-zinc-700 bg-zinc-50 font-sans">
+      <blockquote className="border-l-4 border-accent pl-6 ml-0 mr-0 my-8 italic text-foreground/80 bg-muted/50 font-sans">
         {children}
       </blockquote>
     ),
