@@ -58,27 +58,27 @@ const CodeBlock = async ({ children, className }: { children: string; className?
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }: ComponentWithChildren) => (
-      <h1 className="sm:text-3xl text-xl font-extrabold tracking-tight text-accent font-sans mt-20 mb-10 leading-tight">
+      <h1 className="sm:text-3xl text-xl font-extrabold tracking-tight text-accent font-sans mt-6 leading-tight">
         {children}
       </h1>
     ),
     h2: ({ children }: ComponentWithChildren) => (
-      <h2 className="sm:text-2xl text-xl font-bold tracking-tight text-accent font-sans mt-16 mb-8 leading-snug">
+      <h2 className="sm:text-2xl text-xl font-bold tracking-tight text-accent font-sans mt-6 leading-snug">
         {children}
       </h2>
     ),
     h3: ({ children }: ComponentWithChildren) => (
-      <h3 className="sm:text-xl text-lg font-semibold text-accent font-sans mt-12 mb-6 leading-snug">
+      <h3 className="sm:text-xl text-lg font-semibold text-accent font-sans mt-6 leading-snug">
         {children}
       </h3>
     ),
     h4: ({ children }: ComponentWithChildren) => (
-      <h4 className="text-lg font-medium text-accent font-sans mt-10 mb-4 leading-snug">
+      <h4 className="text-lg font-medium text-accent font-sans mt-6 leading-snug">
         {children}
       </h4>
     ),
     p: ({ children }: ComponentWithChildren) => (
-      <p className="sm:text-lg text-base font-normal text-foreground/90 font-sans leading-8 my-6">
+      <p className="sm:text-lg text-base font-normal text-foreground/90 font-sans leading-8 mt-6">
         {children}
       </p>
     ),
@@ -133,7 +133,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     img: (props) => (
       <Image
         sizes="100vw"
-        className="w-full h-auto rounded-lg my-8 shadow"
+        className="w-full h-auto rounded-lg my-4 shadow"
         {...(props as ImageProps)}
       />
     ),
