@@ -99,7 +99,6 @@ export const projects: Project[] = [
         "/projects/fin-agent/hackathon-winner.png"
       ]
     },
-    achievements: ["Google AI Hackathon Winner", "Advanced AI Agent Integration", "Microservices Architecture"]
   },
 
   {
