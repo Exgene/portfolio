@@ -32,6 +32,77 @@ export interface Project {
 export const projects: Project[] = [
 
   {
+    id: "fin-agent",
+    title: "Fin-Agent - AI-Powered Financial Assistant",
+    date: "2024",
+    tags: ["Next.js", "FastAPI", "Google ADK", "Gemini", "GCP", "PostgreSQL", "Microservices"],
+    content: {
+      brief: "A comprehensive AI-powered financial assistant built for Google AI Hackathon, featuring real-time stock analysis, portfolio insights, and conversational AI with Google ADK agents.",
+      main: "Developed a sophisticated financial platform that combines Next.js frontend with two microservices architecture. The system leverages Google ADK (Agent Development Kit) with Gemini models to provide intelligent financial analysis, real-time stock insights, portfolio management, and conversational AI capabilities. The platform includes streaming chat with tool-calling, dashboard analytics, audio transcription, and background job processing for comprehensive financial insights.",
+      features: [
+        "Real-time stock analysis and market insights",
+        "AI-powered conversational financial assistant",
+        "Portfolio tracking and net worth analysis",
+        "Streaming chat with dynamic tool-calling",
+        "Audio transcription for voice queries",
+        "Background job processing for insights",
+        "Microservices architecture with GCP deployment",
+        "PostgreSQL database for data persistence"
+      ],
+      challenges: [
+        "Integrating multiple AI agents with Google ADK",
+        "Implementing streaming responses with tool-calling",
+        "Managing microservices communication",
+        "Handling real-time financial data processing",
+        "Optimizing database queries for large datasets"
+      ],
+      learnings: [
+        "Advanced AI agent orchestration with Google ADK",
+        "Microservices architecture and deployment",
+        "Real-time streaming with FastAPI and SSE",
+        "GCP cloud infrastructure and PostgreSQL optimization",
+        "Financial data processing and analysis"
+      ]
+    },
+    links: {
+      github: "https://github.com/turing-labs",
+      demo: "https://fin-ai-agent-352166908028.asia-south1.run.app/"
+    },
+    tech: {
+      frontend: ["Next.js", "React", "TypeScript", "TailwindCSS"],
+      backend: ["FastAPI", "Python", "Uvicorn"],
+      database: ["PostgreSQL", "SQLModel", "SQLAlchemy"],
+      ai: ["Google ADK", "Gemini", "LiteLLM", "Whisper"],
+      tools: ["GCP", "Docker", "Git", "MCP Protocol"]
+    },
+    images: {
+      main: "/projects/fin-agent/dashboard-overview.png",
+      screenshots: [
+        "/projects/fin-agent/dashboard-overview.png",
+        "/projects/fin-agent/chat-interface.png",
+        "/projects/fin-agent/stock-analysis.png",
+        "/projects/fin-agent/networth-chart.png",
+        "/projects/fin-agent/portfolio-insights.png",
+        "/projects/fin-agent/financial-chat.png",
+        "/projects/fin-agent/market-data.png",
+        "/projects/fin-agent/ai-insights.png",
+        "/projects/fin-agent/microservices-arch.png",
+        "/projects/fin-agent/gcp-deployment.png",
+        "/projects/fin-agent/adk-agents.png",
+        "/projects/fin-agent/streaming-chat.png",
+        "/projects/fin-agent/real-time-data.png",
+        "/projects/fin-agent/api-documentation.png",
+        "/projects/fin-agent/background-jobs.png",
+        "/projects/fin-agent/postgresql-db.png",
+        "/projects/fin-agent/mcp-integration.png",
+        "/projects/fin-agent/whisper-transcription.png",
+        "/projects/fin-agent/hackathon-winner.png"
+      ]
+    },
+    achievements: ["Google AI Hackathon Winner", "Advanced AI Agent Integration", "Microservices Architecture"]
+  },
+
+  {
     id: "llm-optimization",
     title: "LLM Optimization Research (Rakuten)",
     date: "2025",
