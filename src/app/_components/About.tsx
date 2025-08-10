@@ -12,7 +12,7 @@ export function AboutSimple() {
         width={144}
         height={144}
         sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 144px"
-        className="object-cover rounded-full border-2 border-foreground/60 aspect-square shadow-md w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36"
+        className="hidden min-[370px]:block object-cover rounded-full border-2 border-foreground/60 aspect-square shadow-md w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36"
         priority
         quality={85}
       />
@@ -28,10 +28,9 @@ export function AboutSimple() {
         </p>
         <p className="text-xs sm:text-sm flex items-center gap-2 text-muted-foreground opacity-80 py-2">
           <MapPin className="size-5" aria-hidden="true" />
-          <span>{'Mangalore'}</span> {/** 
-           <MoveHorizontal />
-           <span>{'Bangalore'}</span>
-          **/}
+          <span>{'Mangalore'}</span> 
+          {/* <MoveHorizontal />
+          <span>{'Mangalore'}</span>  */}
         </p>
 
         <ul className="flex gap-4 flex-wrap xs:pr-4">
