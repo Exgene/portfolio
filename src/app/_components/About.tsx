@@ -28,7 +28,7 @@ export function AboutSimple() {
         </p>
         <p className="text-xs sm:text-sm flex items-center gap-2 text-muted-foreground opacity-80 py-2">
           <MapPin className="size-5" aria-hidden="true" />
-          <span>{'Mangalore'}</span> 
+          <span>{'Bangalore'}</span> 
           {/* <MoveHorizontal />
           <span>{'Mangalore'}</span>  */}
         </p>
