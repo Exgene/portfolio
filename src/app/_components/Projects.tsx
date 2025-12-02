@@ -20,7 +20,7 @@ export function Projects() {
         {projects.map((project) => (
           <div key={project.id} id={`${project.id}`} className="scroll-mt-20">
             <div className="flex flex-col gap-1">
-              <h3 className="text-lg font-medium">{project.title}</h3>
+              <Link className="text-lg font-medium" href={`/projects/${project.id}`}>{project.title}</Link>
               <p className="text-sm text-muted-foreground pb-1">{project.date}</p>
               <p className="flex gap-2 flex-wrap">
                 {project.tags.map((tag, index) => {

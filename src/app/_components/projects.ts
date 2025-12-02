@@ -102,6 +102,54 @@ export const projects: Project[] = [
   },
 
   {
+    id: "cuda-lsp",
+    title: "CUDA-LSP - High-Performance Language Server",
+    date: "2025",
+    tags: ["Go", "LSP", "Language Server Protocol", "CUDA", "Compiler", "Incremental Parsing"],
+    content: {
+      brief: "A blazing-fast Language Server Protocol (LSP) implementation in Go for CUDA development, featuring incremental diffing, intelligent hover documentation, and context-aware autocompletion built from scratch.",
+      main: "Engineered a Language Server Protocol implementation from the ground up to provide features for CUDA programming. Built with performance as the core principle, the server implements efficient incremental document synchronization using diff-based text updates, eliminating the need for full document re-parsing on every change. The system features a custom lexer that tokenizes CUDA-specific constructs (threadIdx, blockIdx, blockDim, gridDim, __global__, __device__), intelligent hover information retrieval, and context-aware autocompletion. The architecture leverages Go's concurrency model and efficient string manipulation to achieve sub-millisecond response times for language features, making it significantly faster than traditional full-parse approaches.",
+      features: [
+        "Incremental diffing algorithm for efficient document updates",
+        "Real-time hover documentation for CUDA tokens and keywords",
+        "Context-aware autocompletion with token-based suggestions",
+        "Custom CUDA lexer with support for GPU-specific constructs",
+        "Zero-overhead document state management",
+        "Full LSP protocol compliance with JSON-RPC 2.0",
+        "Efficient two-pointer token extraction algorithm",
+        "Optimized document synchronization without full re-parsing"
+      ],
+      challenges: [
+        "Implementing efficient incremental diffing without full document re-parsing",
+        "Designing a token extraction algorithm that handles edge cases (whitespace, special characters)",
+        "Building a robust document state management system that handles concurrent edits",
+        "Optimizing lexer performance for large CUDA codebases",
+        "Ensuring LSP protocol compliance with proper JSON-RPC message handling",
+        "Handling multi-line edits and complex text transformations"
+      ],
+      learnings: [
+        "Deep understanding of Language Server Protocol internals and JSON-RPC 2.0",
+        "Advanced text processing algorithms and incremental parsing techniques",
+        "Performance optimization in Go for language tooling",
+        "Compiler theory and lexer implementation from scratch",
+        "State management patterns for language servers",
+        "Efficient data structures for document synchronization"
+      ]
+    },
+    links: {
+      github: "https://github.com/exgene/cuda-autocompletes"
+    },
+    tech: {
+      backend: ["Go", "Language Server Protocol", "JSON-RPC 2.0"],
+      tools: ["Git", "Make", "Custom Lexer", "Incremental Parsing"]
+    },
+    images: {
+      main: "/projects/cuda-lsp/main.png",
+      screenshots: []
+    }
+  },
+
+  {
     id: "llm-optimization",
     title: "LLM Optimization Research (Rakuten)",
     date: "2025",

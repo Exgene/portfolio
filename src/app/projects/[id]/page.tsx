@@ -96,12 +96,12 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   }
 
   return (
-    <section className="text-sm py-24 max-w-4xl mx-auto px-4">
+    <section className="text-base py-24 max-w-4xl mx-auto px-4">
       <div className="flex flex-col gap-8">
         <BackButton id={project.id} route="/" />
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-bold">{project.title}</h1>
-          <p className="text-sm text-muted-foreground">{project.date}</p>
+          <p className="text-base text-muted-foreground">{project.date}</p>
           <div className="flex gap-2 flex-wrap">
             {project.tags.map((tag, index) => (
               <span key={index} className="text-xs text-accent bg-black/50 border border-accent/25 px-2 py-1 rounded-4xl">
@@ -134,20 +134,20 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h2 className="text-lg font-semibold">Key Features</h2>
+          <h2 className="text-base font-semibold">Key Features</h2>
           <ul className="list-disc list-inside space-y-1">
             {project.content.features.map((feature, index) => (
-              <li key={index} className="text-foreground/90">{feature}</li>
+              <li key={index} className="text-base text-foreground/90">{feature}</li>
             ))}
           </ul>
         </div>
 
         <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-semibold">Technology Stack</h2>
+          <h2 className="text-base font-semibold">Technology Stack</h2>
           <div className="flex flex-col gap-4">
             {project.tech.frontend && (
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-medium">Frontend</h3>
+                <h3 className="text-base font-medium">Frontend</h3>
                 <p className="flex gap-2 flex-wrap">
                   {project.tech.frontend.map((tech, index) => (
                     <span key={index} className="text-xs text-accent bg-black/50 border border-accent/25 px-2 py-1 rounded-4xl">{tech}</span>
@@ -157,7 +157,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             )}
             {project.tech.backend && (
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-medium">Backend</h3>
+                <h3 className="text-base font-medium">Backend</h3>
                 <p className="flex gap-2 flex-wrap">
                   {project.tech.backend.map((tech, index) => (
                     <span key={index} className="text-xs text-accent bg-black/50 border border-accent/25 px-2 py-1 rounded-4xl">{tech}</span>
@@ -167,7 +167,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             )}
             {project.tech.database && (
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-medium">Database</h3>
+                <h3 className="text-base font-medium">Database</h3>
                 <p className="flex gap-2 flex-wrap">
                   {project.tech.database.map((tech, index) => (
                     <span key={index} className="text-xs text-accent bg-black/50 border border-accent/25 px-2 py-1 rounded-4xl">{tech}</span>
@@ -177,7 +177,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             )}
             {project.tech.ai && (
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-medium">AI/ML</h3>
+                <h3 className="text-base font-medium">AI/ML</h3>
                 <p className="flex gap-2 flex-wrap">
                   {project.tech.ai.map((tech, index) => (
                     <span key={index} className="text-xs text-accent bg-black/50 border border-accent/25 px-2 py-1 rounded-4xl">{tech}</span>
@@ -187,7 +187,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             )}
             {project.tech.tools && (
               <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-medium">Tools</h3>
+                <h3 className="text-base font-medium">Tools</h3>
                 <p className="flex gap-2 flex-wrap">
                   {project.tech.tools.map((tech, index) => (
                     <span key={index} className="text-xs text-accent bg-black/50 border border-accent/25 px-2 py-1 rounded-4xl">{tech}</span>
@@ -200,18 +200,18 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col gap-2">
-            <h2 className="text-lg font-semibold">Challenges</h2>
+            <h2 className="text-base font-semibold">Challenges</h2>
             <ul className="list-disc list-inside space-y-1">
               {project.content.challenges.map((challenge, index) => (
-                <li key={index} className="text-foreground/90">{challenge}</li>
+                <li key={index} className="text-base text-foreground/90">{challenge}</li>
               ))}
             </ul>
           </div>
           <div className="flex flex-col gap-2">
-            <h2 className="text-lg font-semibold">Key Learnings</h2>
+            <h2 className="text-base font-semibold">Key Learnings</h2>
             <ul className="list-disc list-inside space-y-1">
               {project.content.learnings.map((learning, index) => (
-                <li key={index} className="text-foreground/90">{learning}</li>
+                <li key={index} className="text-base text-foreground/90">{learning}</li>
               ))}
             </ul>
           </div>
@@ -219,7 +219,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         {project.images.screenshots.length > 0 && (
           <div className="flex flex-col gap-4">
-            <h2 className="text-lg font-semibold">Screenshots</h2>
+            <h2 className="text-base font-semibold">Screenshots</h2>
             <ImageCarousel 
               images={project.images.screenshots} 
               title={project.title}
@@ -260,10 +260,10 @@ const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         {project.achievements && project.achievements.length > 0 && (
           <div className="flex flex-col gap-2">
-            <h2 className="text-lg font-semibold">Achievements</h2>
+            <h2 className="text-base font-semibold">Achievements</h2>
             <ul className="list-disc list-inside space-y-1">
               {project.achievements.map((achievement, index) => (
-                <li key={index} className="text-foreground/90">{achievement}</li>
+                <li key={index} className="text-base text-foreground/90">{achievement}</li>
               ))}
             </ul>
           </div>
