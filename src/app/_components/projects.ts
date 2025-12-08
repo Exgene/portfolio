@@ -32,6 +32,99 @@ export interface Project {
 export const projects: Project[] = [
 
   {
+    id: "black-contribution",
+    title: "Black - Python Code Formatter Contribution",
+    date: "2025",
+    tags: ["Python", "Open Source", "Code Formatter", "Python 3.12", "Compiler", "AST"],
+    content: {
+      brief: "Contributed a fix to Black, the uncompromising Python code formatter, resolving formatting issues with Python 3.12's new generics syntax. The fix ensures proper handling of type parameters when function parameters contain trailing commas.",
+      main: "Identified and fixed a bug in Black's formatting engine where functions with type parameters and trailing commas in their parameter lists were incorrectly formatted. The issue occurred in the `left_hand_split()` function, which processes both square brackets (for type parameters) and parentheses (for function parameters) as potential split points. When a trailing comma forced a split, the algorithm would incorrectly choose type parameter brackets instead of function parameter parentheses, causing malformed output. The solution involved modifying the split logic to avoid selecting parentheses as split points when they occur inside type parameter brackets, ensuring type parameters stay on the head line while the split correctly happens at the function parameter list. This contribution was merged into Black's main branch and is now used by millions of Python developers worldwide.",
+      features: [
+        "Fixed Python 3.12 generics syntax formatting bug",
+        "Improved type parameter expansion logic in left_hand_split()",
+        "Correct handling of trailing commas in function parameters with type parameters",
+        "Maintained backward compatibility with existing code",
+        "Added comprehensive test cases for edge cases",
+        "Contributed to one of the most widely-used Python tools (41.2k+ stars)"
+      ],
+      challenges: [
+        "Understanding Black's complex AST-based formatting algorithm",
+        "Identifying the root cause in the left_hand_split() function",
+        "Ensuring the fix doesn't break existing formatting behavior",
+        "Writing test cases that cover all edge cases",
+        "Navigating the contribution workflow of a major open-source project"
+      ],
+      learnings: [
+        "Deep understanding of Python AST manipulation and code formatting",
+        "Working with large-scale open-source codebases",
+        "Writing robust test cases for formatter edge cases",
+        "Contributing to projects with strict code quality standards",
+        "Understanding Python 3.12's new generics syntax",
+        "Code review process in major OSS projects"
+      ]
+    },
+    links: {
+      github: "https://github.com/psf/black/pull/4777",
+      documentation: "https://github.com/psf/black/issues/4740"
+    },
+    tech: {
+      backend: ["Python", "AST", "Code Parsing"],
+      tools: ["Git", "pytest", "Black Codebase"]
+    },
+    images: {
+      main: "/projects/black-contribution/main.png",
+      screenshots: []
+    },
+    achievements: ["Merged into Black main branch", "Fixed issue #4740", "Used by 41.2k+ developers"]
+  },
+
+  {
+    id: "gitea-contribution",
+    title: "Gitea - Git Service Contribution",
+    date: "2025",
+    tags: ["Go", "Open Source", "Git", "Webhooks", "Security", "Event Handling"],
+    content: {
+      brief: "Fixed a critical security issue in Gitea where tag events could bypass branch filter targets in webhooks, ensuring proper event filtering and preventing unintended webhook triggers.",
+      main: "Identified and resolved a security vulnerability in Gitea's webhook system where tag events were incorrectly bypassing branch filter configurations. This could lead to webhooks being triggered for events that should have been filtered out, potentially causing unintended actions or security issues. The fix ensures that webhook branch filters are properly enforced for all event types, including tag events, maintaining the integrity of automated workflows and preventing misconfigurations. This contribution improves the reliability and security of one of the most popular self-hosted Git services, used by thousands of organizations worldwide.",
+      features: [
+        "Fixed webhook branch filter bypass vulnerability",
+        "Ensured proper event filtering for tag events",
+        "Improved security of webhook event handling",
+        "Maintained backward compatibility",
+        "Enhanced reliability of automated workflows",
+        "Contributed to a major Git hosting platform"
+      ],
+      challenges: [
+        "Understanding Gitea's complex webhook event system",
+        "Identifying the root cause of the filter bypass",
+        "Ensuring the fix doesn't break existing webhook configurations",
+        "Testing edge cases in event filtering logic",
+        "Contributing to a Go-based codebase with strict standards"
+      ],
+      learnings: [
+        "Webhook security and event filtering best practices",
+        "Go programming patterns in large-scale applications",
+        "Git event handling and branch filtering logic",
+        "Security considerations in automated systems",
+        "Contributing to enterprise-grade open-source projects",
+        "Code review and testing in distributed systems"
+      ]
+    },
+    links: {
+      github: "https://github.com/go-gitea/gitea/pull/35567"
+    },
+    tech: {
+      backend: ["Go", "Git", "Webhooks"],
+      tools: ["Git", "Go Testing", "Gitea Codebase"]
+    },
+    images: {
+      main: "/projects/gitea-contribution/main.png",
+      screenshots: []
+    },
+    achievements: ["Merged into Gitea main branch", "Security vulnerability fix", "Used by thousands of organizations"]
+  },
+
+  {
     id: "fin-agent",
     title: "Fin-Agent - AI-Powered Financial Assistant",
     date: "2024",
